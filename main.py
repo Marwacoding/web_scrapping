@@ -102,3 +102,5 @@ prices = carpet_price()
 #<div class="ml-auto font-weight-semibold price"><span>79,99&nbsp;€</span> <!----></div>
 
 #print(final_price)
+
+final_list = zip(my_carpet_name, my_desc, my_dim, prices)
