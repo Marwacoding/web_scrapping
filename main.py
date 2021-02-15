@@ -9,64 +9,73 @@ data = BeautifulSoup(maison_du_monde,"html.parser") #permet de récupérer la da
 
 #print(data.prettify()) #comme le pprint 
 
-carpet_list = []
-final_item = []
-names = []
-desc = []
-dim = []
 
-def carpet():
-    title_item = data.find_all("h2", class_= "font-weight-normal expand-link name mb-0")
-    
-    for k, item in enumerate(title_item):
-        title = item.getText()
-        carpet_list.append(title)
-        final_item.append(carpet_list[k])
-    #print('this is carpet info', final_item)
-    return final_item
+class Mycarpet() :
+    def __init__(self):
+        self.carpet_list = []
+        self.final_item = []
+        self.names = []
+        self.desc = []
+        self.dim = []
+        self.item_list = []
+        self.final_price = []
+        self.result = []
 
-my_carpet = carpet()
+        
+    def carpet(self):
+        title_item = data.find_all("h2", class_= "font-weight-normal expand-link name mb-0")
+        
+        for k, item in enumerate(title_item):
+            title = item.getText()
+            self.carpet_list.append(title)
+            self.final_item.append(self.carpet_list[k])
+        #print('this is carpet info', final_item)
+        
+
 #print(my_carpet)
+ 
+
+    def carpet_name(self):
+        for i in self.final_item:
+            #print(i)
+            if len(i.split(" - "))==2:
+                self.names.append(i.split(" - ")[0])
+            #print('name of carptet  1= ',self.names)
+        return self.names
+        
+
+    #print(my_carpet_name)
 
 
-def carpet_name():
-    for i in my_carpet:
-        names.append(i.split(" - ")[0])
-        #print(type(names))
-        #print('name of carptet = ',names)
-    return names
-    
-my_carpet_name = carpet_name()
-#print(my_carpet_name)
+    def carpet_desc(self):
+        for i in self.final_item:
+            if len(i.split(" - "))==2:
+                #print(i.split(" - ")[1])
+                #print('description without name = ',(i.split(" - ")))
+                #print("type i = ", type(i)) == str
 
 
-def carpet_desc():
-    for i in my_carpet:
-        if len(i.split(" - "))==2:
-            #print(i.split(" - ")[1])
-            #print('description without name = ',(i.split(" - ")))
-            #print("type i = ", type(i)) == str
+                description_sublist = re.split("(?<=\D)(?=\d)", i.split(" - ")[1], maxsplit=1)
+    #             #print('this is description list", description_sublist') #== 2
+                desc_item = [[item] for items in description_sublist for item in items.split(",")][0][0]
+                self.desc.append(desc_item)
+    #             print(description_sublist)
+    #            print("final list of description ",self.desc)
+        return self.desc
 
 
-             description_sublist = re.split("(?<=\D)(?=\d)", i.split(" - ")[1], maxsplit=1)
-#             #print('this is description list", description_sublist') #== 2
-             desc_item = [[item] for items in description_sublist for item in items.split(",")][0][0]
-             desc.append(desc_item)
-#             #print(description_sublist)
-#             #print("final list of description ",desc)
-    return desc
-
-my_desc = carpet_desc()
 #print(my_desc)
 
-def carpet_dim():
-#         # #print(a.split("(?<=\D+)"))
-    for i in my_carpet:
-         dim_item =re.split("(?<=\D)(?=\d)", i, maxsplit= 1)[1]
-         dim.append(dim_item)
-    return dim
+    def carpet_dim(self):
+    #         # #print(a.split("(?<=\D+)"))
+        for i in self.final_item:
+            if len(i.split(" - "))==2:
+                dim_item =re.split("(?<=\D)(?=\d)", i, maxsplit= 1)[1]
+                self.dim.append(dim_item)
+    
+        return self.dim
+    
 
-my_dim=carpet_dim()
 #print(my_dim)
 
 #         #print('this is the final dimension',dim)
@@ -81,26 +90,52 @@ my_dim=carpet_dim()
 # carpet_name()
 
 
-
-item_list = []
-final_price = []
-
-def carpet_price():
-    item_price = data.find_all("div", class_= "ml-auto font-weight-semibold price")
-    #print(item_price)
+    def carpet_price(self):
+        item_price = data.find_all("div", class_= "ml-auto font-weight-semibold price")
+        #print(item_price)
 
 
-    for k, item in enumerate(item_price):
-        price = item.getText()
-        item_list.append(price)
-        #final_price.append(item_list[k])
-        final_price.append(item_list[k].split()[0])
+        for k, item in enumerate(item_price):
+            price = item.getText()
+            self.item_list.append(price)
+            #final_price.append(item_list[k])
+            self.final_price.append(self.item_list[k].split()[0])
+        return self.final_price
 
-    return final_price
 
-prices = carpet_price()
+
 #<div class="ml-auto font-weight-semibold price"><span>79,99&nbsp;€</span> <!----></div>
 
 #print(final_price)
 
-final_list = zip(my_carpet_name, my_desc, my_dim, prices)
+    def zip_list(self): 
+        # print("this is name",self.names)
+        # print("this is desc",self.desc)
+        # print("this is dim",self.dim)
+        # print("this is price",self.final_price)
+        #print(self.names, self.desc, self.dim, self.final_price)
+        result = list(zip(self.names, self.desc, self.dim, self.final_price))
+        #self.result.append(r)
+        #self.result= set(r)
+        return result
+
+    
+
+
+#if __name__ == '__main__':
+my_carpets = Mycarpet()
+item= my_carpets.carpet()
+my_name = my_carpets.carpet_name()
+#print(my_name)
+my_desc = my_carpets.carpet_desc()
+#print(my_desc)
+my_dim = my_carpets.carpet_dim()
+#print(my_dim)
+prices = my_carpets.carpet_price()
+#print(prices)
+results = my_carpets.zip_list()
+print(results)
+
+
+    #my_carpets.final_list = zip(my_name, my_desc, my_dim, prices)
+    
