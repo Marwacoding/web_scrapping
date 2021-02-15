@@ -1,71 +1,66 @@
-
-import sqlite3
+import mysql.connector
+#import pandas as pd
 from main import *
 
-conn = sqlite3.connect("my_db.db")
-c = conn.cursor()
+
+mydb = mysql.connector.connect(
+  host="scrap_sql",
+  user="root",
+  password="123",
+  auth_plugin='mysql_native_password'
+  )
 
 
-def create_db():
+c = mydb.cursor()
+
+#conn = sqlite3.connect("my_db.db")
+#c = conn.cursor()
+
+
+# def create_db():
     
-    print("hello")
+#     print("hello")
 
-# Create the table, read the article below if you
-# are unsure of what they mean
-# https://www.w3schools.com/sql/sql_datatypes.asp
+# # Create the table, read the article below if you
+# # are unsure of what they mean
+# # https://www.w3schools.com/sql/sql_datatypes.asp
 
-    # my_table = """ CREATE TABLE carpet (
-    #                 id INTEGER PRIMARY KEY NOT NULL,
-    #                 carpet_name VARCHAR(100),
-    #                 price VARCHAR(30),
-    #                 )"""
+#     # my_table = """ CREATE TABLE carpet (
+#     #                 id INTEGER PRIMARY KEY NOT NULL,
+#     #                 carpet_name VARCHAR(100),
+#     #                 price VARCHAR(30),
+#     #                 )"""
 
-    c.execute("DROP TABLE carpet")
-    c.execute("CREATE TABLE IF NOT EXISTS carpet ( id INTEGER PRIMARY KEY NOT NULL, carpet_name VARCHAR(100),price VARCHAR(30))")
-    c.execute("INSERT INTO carpet Values(1,'Nom','prix')")
-    c.execute("SELECT * FROM carpet")
-    conn.commit()
+#     c.execute("DROP TABLE carpet")
+#     c.execute("CREATE TABLE IF NOT EXISTS carpet (id INTEGER PRIMARY KEY , carpet_name VARCHAR(255) NOT NULL, carpet_description VARCHAR(255) NOT NULL, carpet_dimention VARCHAR(255) NOT NULL, price VARCHAR(30) NOT NULL)")
+#     #c.execute("INSERT INTO carpet Values(1,'Nom','prix')")
+#     #c.execute("SELECT * FROM carpet")
+#     #conn.commit()
 
-    # Remember to save + close
-
-
-
-create_db()
-
-def read_from_db():
-    c.execute ('SELECT * FROM carpet ') 
-for row in c.fetchall():
-    print(row)
-
-read_from_db()
+#     # Remember to save + close
 
 
-##
-#query = pragma table_info('db_table')
-#query show databases; =  "PRAGMA database_list;"
-'''
- # Insert some users into our database
- def insert_db():
- conn = sqlite3.connect("database.db")
- c = conn.cursor()
- c.execute(
- """INSERT INTO emp VALUES (23, "Rishabh", "Bansal",
- "M", "2014-03-28");""")
- c.execute(
- """INSERT INTO emp VALUES (1, "Bill", "Gates", "M",
- "1980-10-28");""")
- # Remember to save + close
- conn.commit()
- conn.close()
- # Fetch the data
- def select_from_db():
- conn = sqlite3.connect("database.db")
- c = conn.cursor()
-c.execute("SELECT * FROM emp")
- # Store + print the fetched data
- result = c.fetchall()
- for i in result:
- print(i)
- # Remember to save + close
- conn.commit()
- '''
+
+# create_db()
+
+
+
+# def read_from_db():
+
+#     for name, description, dimension, price in zip(my_carpet_name, my_desc, my_dim, prices):
+#             #print(i)
+#             #print(j)
+#             c.execute("INSERT INTO carpet (carpet_name, carpet_description, carpet_dimention, price) VALUES(?, ?, ?, ?) ;", (name, description, dimension, price))
+#     #conn.commit()
+
+#     c.execute("SELECT * FROM carpet")
+#     #conn.commit()
+
+#     for row in c.fetchall():
+#         print(row)
+
+#         # df = pd.DataFrame(row)
+#         # print(df)
+#     #conn.commit()
+
+# read_from_db()
