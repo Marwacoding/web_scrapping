@@ -3,6 +3,11 @@ import mysql.connector
 from main import *
 
 class Table():
+
+    logging.basicConfig(filename = "web_scrapping.log", 
+    level= logging.INFO, format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
+
+    
     def __init__(self):
         self.mydb = mysql.connector.connect (
         host="scrap_sql",
@@ -13,8 +18,6 @@ class Table():
 
 
         self.c = self.mydb.cursor()
-
-
 
     #conn = sqlite3.connect("my_db.db")
     #c = conn.cursor()

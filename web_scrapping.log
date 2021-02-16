@@ -1,0 +1,137 @@
+2021-02-16 20:48:49,850 - root -INFO - accessing carpet info -- Start
+2021-02-16 20:48:49,897 - root -INFO - accessing carpet info -- End
+2021-02-16 20:48:49,899 - root -INFO - accessing carpet name -- Start
+2021-02-16 20:48:49,902 - root -INFO - accessing carpet name -- End
+2021-02-16 20:48:49,904 - root -INFO - accessing carpet description -- Start
+2021-02-16 20:48:49,907 - root -INFO - accessing carpet description -- End
+2021-02-16 20:48:49,909 - root -INFO - accessing carpet dimension -- Start
+2021-02-16 20:48:49,911 - root -INFO - accessing carpet dimension -- End
+2021-02-16 20:48:49,912 - root -INFO - accessing carpet price -- Start
+2021-02-16 20:48:49,950 - root -INFO - accessing carpet price -- End
+2021-02-16 20:48:49,951 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-16 20:48:49,954 - root -INFO - ziping all list to tranfer db-- End
+2021-02-16 20:48:52,139 - root -INFO - Getting my mirros name from HTML into a list: start
+2021-02-16 20:48:52,164 - root -INFO - Getting my mirrors name from HTML into a list: end
+2021-02-16 20:48:52,168 - root -INFO - Getting my mirror price from HTML into a list: start
+2021-02-16 20:48:52,208 - root -INFO - Getting my carpets price from HTML into a list: end
+2021-02-16 20:48:52,210 - root -INFO - Zipping all my lists in tuple: start
+2021-02-16 20:48:52,211 - root -INFO - Zipping all my lists in tuple: end
+2021-02-16 20:49:17,077 - root -INFO - accessing carpet info -- Start
+2021-02-16 20:49:17,105 - root -INFO - accessing carpet info -- End
+2021-02-16 20:49:17,106 - root -INFO - accessing carpet name -- Start
+2021-02-16 20:49:17,107 - root -INFO - accessing carpet name -- End
+2021-02-16 20:49:17,110 - root -INFO - accessing carpet description -- Start
+2021-02-16 20:49:17,111 - root -INFO - accessing carpet description -- End
+2021-02-16 20:49:17,113 - root -INFO - accessing carpet dimension -- Start
+2021-02-16 20:49:17,116 - root -INFO - accessing carpet dimension -- End
+2021-02-16 20:49:17,117 - root -INFO - accessing carpet price -- Start
+2021-02-16 20:49:17,174 - root -INFO - accessing carpet price -- End
+2021-02-16 20:49:17,178 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-16 20:49:17,181 - root -INFO - ziping all list to tranfer db-- End
+2021-02-16 20:49:17,708 - root -INFO - Getting my mirros name from HTML into a list: start
+2021-02-16 20:49:17,731 - root -INFO - Getting my mirrors name from HTML into a list: end
+2021-02-16 20:49:17,733 - root -INFO - Getting my mirror price from HTML into a list: start
+2021-02-16 20:49:17,771 - root -INFO - Getting my carpets price from HTML into a list: end
+2021-02-16 20:49:17,775 - root -INFO - Zipping all my lists in tuple: start
+2021-02-16 20:49:17,776 - root -INFO - Zipping all my lists in tuple: end
+2021-02-16 20:49:45,748 - root -INFO - accessing carpet info -- Start
+2021-02-16 20:49:45,774 - root -INFO - accessing carpet info -- End
+2021-02-16 20:49:45,775 - root -INFO - accessing carpet name -- Start
+2021-02-16 20:49:45,777 - root -INFO - accessing carpet name -- End
+2021-02-16 20:49:45,778 - root -INFO - accessing carpet description -- Start
+2021-02-16 20:49:45,780 - root -INFO - accessing carpet description -- End
+2021-02-16 20:49:45,782 - root -INFO - accessing carpet dimension -- Start
+2021-02-16 20:49:45,784 - root -INFO - accessing carpet dimension -- End
+2021-02-16 20:49:45,786 - root -INFO - accessing carpet price -- Start
+2021-02-16 20:49:45,818 - root -INFO - accessing carpet price -- End
+2021-02-16 20:49:45,820 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-16 20:49:45,821 - root -INFO - ziping all list to tranfer db-- End
+2021-02-16 20:49:46,321 - root -INFO - Getting my mirros name from HTML into a list: start
+2021-02-16 20:50:03,734 - root -INFO - accessing carpet info -- Start
+2021-02-16 20:50:03,765 - root -INFO - accessing carpet info -- End
+2021-02-16 20:50:03,766 - root -INFO - accessing carpet name -- Start
+2021-02-16 20:50:03,768 - root -INFO - accessing carpet name -- End
+2021-02-16 20:50:03,770 - root -INFO - accessing carpet description -- Start
+2021-02-16 20:50:03,773 - root -INFO - accessing carpet description -- End
+2021-02-16 20:50:03,774 - root -INFO - accessing carpet dimension -- Start
+2021-02-16 20:50:03,777 - root -INFO - accessing carpet dimension -- End
+2021-02-16 20:50:03,779 - root -INFO - accessing carpet price -- Start
+2021-02-16 20:50:03,825 - root -INFO - accessing carpet price -- End
+2021-02-16 20:50:03,827 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-16 20:50:03,828 - root -INFO - ziping all list to tranfer db-- End
+2021-02-16 20:50:04,375 - root -INFO - Getting my mirros name from HTML into a list: start
+2021-02-16 20:50:04,399 - root -INFO - Getting my mirror price from HTML into a list: start
+2021-02-16 20:50:04,435 - root -INFO - Getting my carpets price from HTML into a list: end
+2021-02-16 20:50:04,436 - root -INFO - Zipping all my lists in tuple: start
+2021-02-16 20:50:04,438 - root -INFO - Zipping all my lists in tuple: end
+2021-02-16 20:56:22,041 - root -INFO - accessing carpet dimension -- End
+2021-02-16 20:56:22,598 - root -INFO - accessing carpet info -- Start
+2021-02-16 20:56:22,620 - root -INFO - accessing carpet info -- End
+2021-02-16 20:56:22,625 - root -INFO - accessing carpet name -- Start
+2021-02-16 20:56:22,629 - root -INFO - accessing carpet description -- Start
+2021-02-16 20:56:22,634 - root -INFO - accessing carpet dimension -- Start
+2021-02-16 20:56:22,638 - root -INFO - accessing carpet price -- Start
+2021-02-16 20:56:22,674 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-16 20:56:23,185 - root -INFO - Accessing my mirros name: start
+2021-02-16 20:56:23,211 - root -INFO - Getting my mirror price: start
+2021-02-16 20:56:23,242 - root -INFO - Getting my carpets price: end
+2021-02-16 20:56:23,244 - root -INFO - Zipping all my lists in tuple: start
+2021-02-16 20:56:23,248 - root -INFO - Zipping all my lists in tuple: end
+2021-02-16 20:56:37,575 - root -INFO - accessing carpet dimension -- End
+2021-02-16 20:56:38,123 - root -INFO - accessing carpet info -- Start
+2021-02-16 20:56:38,148 - root -INFO - accessing carpet info -- End
+2021-02-16 20:56:38,150 - root -INFO - accessing carpet name -- Start
+2021-02-16 20:56:38,151 - root -INFO - accessing carpet description -- Start
+2021-02-16 20:56:38,154 - root -INFO - accessing carpet dimension -- Start
+2021-02-16 20:56:38,156 - root -INFO - accessing carpet price -- Start
+2021-02-16 20:56:38,206 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-16 20:56:38,726 - root -INFO - Accessing my mirros name: start
+2021-02-16 20:56:38,745 - root -INFO - Getting my mirror price: start
+2021-02-16 20:56:38,778 - root -INFO - Zipping all my lists in tuple: start
+2021-02-16 20:56:38,781 - root -INFO - Zipping all my lists in tuple: end
+2021-02-16 20:57:02,917 - root -INFO - accessing carpet dimension -- End
+2021-02-16 20:57:03,944 - root -INFO - accessing carpet info -- Start
+2021-02-16 20:57:03,975 - root -INFO - accessing carpet info -- End
+2021-02-16 20:57:03,977 - root -INFO - accessing carpet name -- Start
+2021-02-16 20:57:03,978 - root -INFO - accessing carpet description -- Start
+2021-02-16 20:57:03,981 - root -INFO - accessing carpet dimension -- Start
+2021-02-16 20:57:03,983 - root -INFO - accessing carpet price -- Start
+2021-02-16 20:57:04,024 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-16 20:57:05,180 - root -INFO - Accessing my mirros name: start
+2021-02-16 20:57:05,211 - root -INFO - Getting my mirror price: start
+2021-02-16 20:57:05,242 - root -INFO - Zipping all my lists in tuple: start
+2021-02-16 20:57:05,244 - root -INFO - Zipping all my lists in tuple: end
+2021-02-16 20:57:41,185 - root -INFO - accessing carpet dimension -- End
+2021-02-16 20:57:41,812 - root -INFO - accessing carpet info -- Start
+2021-02-16 20:57:41,840 - root -INFO - accessing carpet info -- End
+2021-02-16 20:57:41,841 - root -INFO - accessing carpet name -- Start
+2021-02-16 20:57:41,843 - root -INFO - accessing carpet description -- Start
+2021-02-16 20:57:41,845 - root -INFO - accessing carpet dimension -- Start
+2021-02-16 20:57:41,847 - root -INFO - accessing carpet price -- Start
+2021-02-16 20:57:41,883 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-16 20:57:42,363 - root -INFO - Accessing my mirros name: start
+2021-02-16 20:57:42,381 - root -INFO - Getting my mirror price: start
+2021-02-16 20:57:42,416 - root -INFO - Zipping all my lists in tuple: start
+2021-02-16 21:02:14,496 - root -INFO - Accessing my mirros name: start
+2021-02-16 21:02:14,519 - root -INFO - Getting my mirror price: start
+2021-02-16 21:02:14,556 - root -INFO - Zipping all my lists in tuple: start
+2021-02-16 21:02:15,130 - root -INFO - accessing carpet info -- Start
+2021-02-16 21:02:15,159 - root -INFO - accessing carpet info -- End
+2021-02-16 21:02:15,161 - root -INFO - accessing carpet name -- Start
+2021-02-16 21:02:15,162 - root -INFO - accessing carpet description -- Start
+2021-02-16 21:02:15,165 - root -INFO - accessing carpet dimension -- Start
+2021-02-16 21:02:15,167 - root -INFO - accessing carpet price -- Start
+2021-02-16 21:02:15,205 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-16 21:02:15,801 - root -INFO - Accessing my mirros name: start
+2021-02-16 21:02:15,827 - root -INFO - Getting my mirror price: start
+2021-02-16 21:02:15,865 - root -INFO - Zipping all my lists in tuple: start
+2021-02-16 21:03:23,489 - root -INFO - accessing carpet info -- Start
+2021-02-16 21:03:23,517 - root -INFO - accessing carpet info -- End
+2021-02-16 21:03:23,519 - root -INFO - accessing carpet name -- Start
+2021-02-16 21:03:23,520 - root -INFO - accessing carpet description -- Start
+2021-02-16 21:03:23,522 - root -INFO - accessing carpet dimension -- Start
+2021-02-16 21:03:23,525 - root -INFO - accessing carpet price -- Start
+2021-02-16 21:03:23,561 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-16 21:03:24,085 - root -INFO - Accessing my mirros name: start
+2021-02-16 21:03:24,106 - root -INFO - Getting my mirror price: start
+2021-02-16 21:03:24,145 - root -INFO - Zipping all my lists in tuple: start
