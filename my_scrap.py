@@ -9,12 +9,11 @@ class Mycarpet() :
     logging.basicConfig(filename = "web_scrapping.log", 
     level= logging.INFO, format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
 
-    try:
-        response = requests.get('https://www.maisonsdumonde.com/FR/fr/c/tapis-1559ac122904996dcae8be4c5de8fda6') #je prends les infos from mon url 
-    except HTTPError:
-        logging.info("Could not acces the URL")
-
-#print(data.prettify()) #comme le pprint 
+    
+    #response = requests.get('https://www.maisonsdumonde.com/FR/fr/c/tapis-1559ac122904996dcae8be4c5de8fda6') #je prends les infos from mon url 
+    
+    logging.info("Could not acces the URL")
+ 
 
     def __init__(self):
         self.response = requests.get('https://www.maisonsdumonde.com/FR/fr/c/tapis-1559ac122904996dcae8be4c5de8fda6') #je prends les infos from mon url 
@@ -66,24 +65,17 @@ class Mycarpet() :
 
         for i in self.final_item:
             if len(i.split(" - "))==2:
-                #print(i.split(" - ")[1])
-                #print('description without name = ',(i.split(" - ")))
-                #print("type i = ", type(i)) == str
-
                 description_sublist = re.split("(?<=\D)(?=\d)", i.split(" - ")[1], maxsplit=1)
-    #             #print('this is description list", description_sublist') #== 2
                 desc_item = [[item] for items in description_sublist for item in items.split(",")][0][0]
                 self.desc.append(desc_item)
-    #             print(description_sublist)
-    #            print("final list of description ",self.desc)
+
         return self.desc
 
-        logging.info("accessing carpet description -- End")
 
     def carpet_dim(self):
-        logging.info("accessing carpet dimension -- Start")
+        logging.info("accessing carpet dimention -- Start")
 
-    #         # #print(a.split("(?<=\D+)"))
+
         for i in self.final_item:
             if len(i.split(" - "))==2:
                 dim_item =re.split("(?<=\D)(?=\d)", i, maxsplit= 1)[1]
@@ -113,36 +105,34 @@ class Mycarpet() :
     def zip_list(self): 
         logging.info("ziping all list to tranfer db-- Start")
 
-        # print("this is name",self.names)
-        # print("this is desc",self.desc)
-        # print("this is dim",self.dim)
-        # print("this is price",self.final_price)
+        #print("this is name",self.names)
+        #print("this is desc",self.desc)
+        #print("this is dim",self.dim)
+        #print("this is price",self.final_price)
         #print(self.names, self.desc, self.dim, self.final_price)
         result = list(zip(self.names, self.desc, self.dim, self.final_price))
         #self.result.append(r)
-        #self.result= set(r)
+        
         return result
 
         logging.info("ziping all list to tranfer db-- End")
 
-    
-
-#print(results)
-
-
-    #my_carpets.final_list = zip(my_name, my_desc, my_dim, prices)
-    
+        
 class Mirror(): 
     def __init__(self): 
         self.response_mirror = requests.get('https://www.maisonsdumonde.com/FR/fr/c/miroirs-484554f26aa42ef448cafd6fe7ad385e') #je prends les infos from mon url 
         self.maison_du_monde_mirror = self.response_mirror.text 
         self.data = BeautifulSoup(self.maison_du_monde_mirror,"html.parser")
+        
         self.mirror_name_list = []
+        self.mirror_names = []
+        self.mirror_desc = []
+        self.mirror_dim = []
         self.mirror_price_list = []
         self.final_mirror = []
 
-    def name_mirror(self):
-        logging.info('Accessing my mirros name: start')
+    def name_mirror_total(self):
+        logging.info('Accessing mirros name: start')
         mirror_name = []
         title_name = self.data.find_all("h2", class_= "font-weight-normal expand-link name mb-0")
 
@@ -151,9 +141,52 @@ class Mirror():
             mirror_name.append(title)
             self.mirror_name_list.append(mirror_name[k])
         return self.mirror_name_list
-        #print(self.mirror_name_list)
 
-        logging.info('Accessing my mirrors name: end')
+        logging.info('Accessing mirrors name: end')
+
+    
+
+    def mirror_name(self):
+        logging.info("accessing mirror name -- Start")
+
+        for i in self.mirror_name_list:
+            #print(i)
+            if len(i.split(" - "))==2:
+                self.mirror_names.append(i.split(" - ")[0])
+        return self.mirror_names
+
+        logging.info("accessing mirror name -- End")
+
+
+
+    def mirror_description(self):
+        logging.info("accessing mirror description -- Start")
+
+
+        for i in self.mirror_name_list:
+            if len(i.split(" - "))==2:
+                description_sublist = re.split("(?<=\D)(?=\d)", i.split(" - ")[1], maxsplit=1)
+                desc_item = [[item] for items in description_sublist for item in items.split(",")][0][0]
+                self.mirror_desc.append(desc_item)
+
+        return self.mirror_desc
+
+        logging.info("accessing mirror description -- End")
+    
+
+
+    def mirror_dimention(self):
+        logging.info("accessing mirror dimension -- Start")
+
+        for i in self.mirror_name_list:
+            if len(i.split(" - "))==2:
+                dim_item =re.split("(?<=\D)(?=\d)", i, maxsplit= 1)[1]
+                self.mirror_dim.append(dim_item)
+    
+        return self.mirror_dim
+        logging.info("accessing mirror dimension -- End")
+
+
 
     def price_mirror(self):
         logging.info('Getting my mirror price: start')
@@ -165,20 +198,17 @@ class Mirror():
             mirror_price.append(price)
             self.mirror_price_list.append(mirror_price[k].split()[0])
         return self.mirror_price_list
-        #print(self.mirror_price_list)
 
         logging.info('Getting my carpets price: end')
+
+    
 
     def zip_list_mirror(self):
         logging.info('Zipping all my lists in tuple: start')
 
-        result_mirror= list(zip(self.mirror_name_list, self.mirror_price_list))
-        #print("This is my result:" , result)
+        result_mirror= list(zip(self.mirror_names, self.mirror_desc, self.mirror_dim, self.mirror_price_list))
 
         return result_mirror
 
         logging.info('Zipping all my lists in tuple: end')
-
-        #return self.final_mirror
-
 
