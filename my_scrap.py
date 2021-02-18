@@ -2,7 +2,10 @@ import re
 import requests
 from bs4 import BeautifulSoup #pour utiliser BeautifulSoup j'ai besoin de bs4
 import logging
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+export PYTHONWARNINGS="ignore:Unverified HTTPS request"
 
 try:
     response = requests.get('https://www.maisonsdumonde.com/FR/fr/c/tapis-1559ac122904996dcae8be4c5de8fda6', verify=False)

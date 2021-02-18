@@ -17,7 +17,7 @@ my_dim = my_carpets.carpet_dim()
 #print(my_dim)
 
 prices = my_carpets.carpet_price()
-#print(prices)
+print(prices)
 
 results = my_carpets.zip_list()
 #print(results)
