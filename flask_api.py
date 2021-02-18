@@ -44,14 +44,14 @@ def api_mirror():
 @app.route('/api_carpet_lowest_to_highest_price')
 def carpet_lowest_to_highest_price():
 
-    sql_query.execute(f"SELECT * FROM carpet ORDER BY carpet_price ASC")
+    sql_query.execute(f"SELECT * FROM carpet ORDER BY CAST(carpet_price AS DECIMAL(10,2)) ASC")
     output = sql_query.fetchall()
     return jsonify(output)
 
 @app.route('/api_carpet_highest_to_lowest_price')
 def carpet_highest_to_lowest_price():
 
-    sql_query.execute(f"SELECT * FROM carpet ORDER BY carpet_price DESC")
+    sql_query.execute(f"SELECT * FROM carpet ORDER BY CAST(carpet_price AS DECIMAL(10,2)) DESC")
     output = sql_query.fetchall()
     return jsonify(output)
 
@@ -59,7 +59,7 @@ def carpet_highest_to_lowest_price():
 @app.route('/api_mirror_lowest_to_highest_price')
 def mirror_lowest_to_highest_price():
 
-    sql_query.execute(f"SELECT * FROM mirror ORDER BY mirror_price ASC")
+    sql_query.execute(f"SELECT * FROM mirror ORDER BY CAST(mirror_price AS DECIMAL(10,2)) ASC")
     output = sql_query.fetchall()
     return jsonify(output)
 
@@ -67,7 +67,7 @@ def mirror_lowest_to_highest_price():
 @app.route('/api_mirror_highest_to_lowest_price')
 def mirrro_highest_to_lowest_price():
 
-    sql_query.execute(f"SELECT * FROM mirror ORDER BY mirror_price DESC")
+    sql_query.execute(f"SELECT * FROM mirror ORDER BY CAST(mirror_price AS DECIMAL(10,2)) DESC")
     output = sql_query.fetchall()
     return jsonify(output)
 
