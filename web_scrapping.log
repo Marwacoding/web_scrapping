@@ -1627,3 +1627,45 @@
 2021-02-18 10:49:14,151 - root -INFO - Zipping all my lists in tuple: start
 2021-02-18 10:49:14,297 - root -INFO - ziping all list to tranfer db-- Start
 2021-02-18 10:49:14,530 - root -INFO - Zipping all my lists in tuple: start
+2021-02-18 10:54:40,342 - root -INFO - accessing carpet info -- Start
+2021-02-18 10:54:40,366 - root -INFO - accessing carpet info -- End
+2021-02-18 10:54:40,367 - root -INFO - accessing carpet name -- Start
+2021-02-18 10:54:40,370 - root -INFO - accessing carpet description -- Start
+2021-02-18 10:54:40,373 - root -INFO - accessing carpet dimention -- Start
+2021-02-18 10:54:40,375 - root -INFO - accessing carpet price -- Start
+2021-02-18 10:54:40,427 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-18 10:54:41,215 - root -INFO - Accessing mirros name: start
+2021-02-18 10:54:41,273 - root -INFO - accessing mirror name -- Start
+2021-02-18 10:54:41,289 - root -INFO - accessing mirror description -- Start
+2021-02-18 10:54:41,300 - root -INFO - accessing mirror dimension -- Start
+2021-02-18 10:54:41,319 - root -INFO - Getting my mirror price: start
+2021-02-18 10:54:41,394 - root -INFO - Zipping all my lists in tuple: start
+2021-02-18 10:54:41,588 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-18 10:54:41,810 - root -INFO - Zipping all my lists in tuple: start
+2021-02-18 12:59:26,237 - root -INFO - accessing carpet info -- Start
+2021-02-18 12:59:26,268 - root -INFO - accessing carpet info -- End
+2021-02-18 12:59:26,270 - root -INFO - accessing carpet name -- Start
+2021-02-18 12:59:26,273 - root -INFO - accessing carpet description -- Start
+2021-02-18 12:59:26,275 - root -INFO - accessing carpet dimention -- Start
+2021-02-18 12:59:26,278 - root -INFO - accessing carpet price -- Start
+2021-02-18 12:59:26,315 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-18 12:59:27,057 - root -INFO - Accessing mirros name: start
+2021-02-18 12:59:27,094 - root -INFO - accessing mirror name -- Start
+2021-02-18 12:59:27,098 - root -INFO - accessing mirror description -- Start
+2021-02-18 12:59:27,104 - root -INFO - accessing mirror dimension -- Start
+2021-02-18 12:59:27,107 - root -INFO - Getting my mirror price: start
+2021-02-18 12:59:27,151 - root -INFO - Zipping all my lists in tuple: start
+2021-02-18 12:59:27,387 - root -INFO - ziping all list to tranfer db-- Start
+2021-02-18 12:59:27,539 - root -INFO - Zipping all my lists in tuple: start
+2021-02-18 14:02:40,768 - root -INFO - failed to access url
+2021-02-18 14:03:33,288 - root -INFO - failed to access url
+2021-02-18 14:10:22,157 - root -INFO - failed to access url
+2021-02-18 14:10:53,121 - root -INFO - failed to access url
+2021-02-18 14:11:00,979 - root -INFO - failed to access url
+2021-02-18 14:12:45,234 - root -INFO - failed to access url
+2021-02-18 14:13:20,628 - root -INFO - failed to access url
+2021-02-18 14:15:16,758 - root -INFO - failed to access url
+2021-02-18 14:15:21,420 - root -INFO - failed to access url
+2021-02-18 14:18:53,011 - root -INFO - failed to access url
+2021-02-18 14:22:03,304 - root -INFO - failed to access url
+2021-02-18 14:22:15,888 - root -INFO - failed to access url

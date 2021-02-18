@@ -4,19 +4,22 @@ from bs4 import BeautifulSoup #pour utiliser BeautifulSoup j'ai besoin de bs4
 import logging
 
 
+try:
+    response = requests.get('https://www.maisonsdumonde.com/FR/fr/c/tapis-1559ac122904996dcae8be4c5de8fda6', verify=False)
+except requests.exceptions.ConnectionError:
+    logging.info("failed to access url")
+
+
+
 class Mycarpet() :
 
     logging.basicConfig(filename = "web_scrapping.log", 
     level= logging.INFO, format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
 
-    
-    #response = requests.get('https://www.maisonsdumonde.com/FR/fr/c/tapis-1559ac122904996dcae8be4c5de8fda6') #je prends les infos from mon url 
-    
-    logging.info("Could not acces the URL")
- 
 
     def __init__(self):
-        self.response = requests.get('https://www.maisonsdumonde.com/FR/fr/c/tapis-1559ac122904996dcae8be4c5de8fda6') #je prends les infos from mon url 
+        
+        self.response = requests.get('https://www.maisonsdumonde.com/FR/fr/c/tapis-1559ac122904996dcae8be4c5de8fda6', timeout=5, verify=False) 
         self.maison_du_monde = self.response.text 
         self.data = BeautifulSoup(self.maison_du_monde,"html.parser")
 
@@ -120,7 +123,7 @@ class Mycarpet() :
         
 class Mirror(): 
     def __init__(self): 
-        self.response_mirror = requests.get('https://www.maisonsdumonde.com/FR/fr/c/miroirs-484554f26aa42ef448cafd6fe7ad385e') #je prends les infos from mon url 
+        self.response_mirror = requests.get('https://www.maisonsdumonde.com/FR/fr/c/miroirs-484554f26aa42ef448cafd6fe7ad385e', timeout=5, verify=False) #je prends les infos from mon url 
         self.maison_du_monde_mirror = self.response_mirror.text 
         self.data = BeautifulSoup(self.maison_du_monde_mirror,"html.parser")
         
