@@ -1,15 +1,21 @@
-from flask import Flask, render_template, jsonify, request 
+from flask import Flask, render_template, jsonify, request
+from flask_cors import CORS 
+#https://flask-cors.readthedocs.io/en/latest/
 import mysql.connector
-import json
+import logging
+
 
 app = Flask(__name__)
+CORS(app)
 
 conn = mysql.connector.connect( host='scrap_sql',
                                 database='my_db',
                                 user='root',
                                 password='123',
                                 )
-sql_query = conn.cursor()
+
+sql_query = conn.cursor(dictionary=True)
+
 
 logging.basicConfig(filename = "flask_api.log", 
 level= logging.INFO, format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
@@ -18,7 +24,7 @@ level= logging.INFO, format='%(asctime)s - %(name)s -%(levelname)s - %(message)s
 
 @app.route('/', methods=['GET'])
 def welcome(): 
-    return "Welcome to Maison Du Monde's API ! "  
+    return render_template("index.html")
 
 @app.route('/api', methods=['GET'])
 def api():
@@ -36,7 +42,7 @@ def api_carpet():
 @app.route('/api_mirror', methods=['GET'])
 def api_mirror(): 
 
-    sql_query.execute("SELECT * FROM Mirror")
+    sql_query.execute("SELECT * FROM mirror")
     output = sql_query.fetchall()
     return jsonify(output)
 
@@ -122,5 +128,26 @@ def links():
 
     return jsonify(href)
 
+@app.route('/time', methods=['GET', 'POST'])
+def time_carpet():
+    carpet_time = request.args.get('time')
+    sql_query.execute("SELECT * FROM carpet WHERE DATE_ADD(carpet_date, INTERVAL 1 WEEK) >= NOW()")
+    output = sql_query.fetchall()
+    return jsonify(output)
+
+
+#   def reset_logfile(logfile_path):
+#         ### Reset du fichier log
+#         my_txt_file= open(logfile_path, "r+")    
+#         # to erase all data  
+#         my_txt_file.truncate() 
+#         # to close file
+#         my_txt_file.close()
+
 if __name__ == "__main__": 
     app.run(host= "0.0.0.0", port=3050, debug = True)
+    
+
+     
+    
+    

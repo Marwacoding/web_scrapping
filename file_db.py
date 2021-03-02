@@ -129,7 +129,7 @@ except Exception as e:
     logging.warning("[SQL] Failed to insert data in carpet table, check conditions, zipped listn connections or syntaxe" + str(e))
 
 
-###############################
+# ###############################
 
 try:
 
