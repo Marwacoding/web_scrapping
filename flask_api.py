@@ -130,7 +130,6 @@ def links():
 
 @app.route('/time', methods=['GET', 'POST'])
 def time_carpet():
-    carpet_time = request.args.get('time')
     sql_query.execute("SELECT * FROM carpet WHERE DATE_ADD(carpet_date, INTERVAL 1 WEEK) >= NOW()")
     output = sql_query.fetchall()
     return jsonify(output)
