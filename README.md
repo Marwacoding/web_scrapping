@@ -58,7 +58,7 @@ In the near futur, we will implement a more user friendly frontend with the use 
  - [ ] having a proper test file to make sure that my code is sustainable
  #
  
-#French
+# French
 
 Ce repositoire Github consiste à scrapper le site Maison du Monde afin de récupérer les miroir et les tapis les plus populaires. 
 
