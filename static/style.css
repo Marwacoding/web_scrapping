@@ -1,0 +1,11 @@
+body{
+    background-color: white;
+}
+
+h1, h2{
+    margin: auto
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+}
