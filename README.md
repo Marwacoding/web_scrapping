@@ -18,7 +18,12 @@ Now that our containers are running, the last step is to execute it. You have to
 ## Technologies
 
 In this project, we used a lot of different technologies. To name them, there was : 
-
+ - Python							
+ - mySQL
+ - HTML
+ - CSS
+ - Jija
+ 
  #
  ### Packages
 
