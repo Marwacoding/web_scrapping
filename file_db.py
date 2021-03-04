@@ -2,7 +2,7 @@ import mysql.connector
 import logging
 from my_scrap import *
 from main import call_method_carpet, call_method_mirror
-import datetime
+
 
 #print('my db')
 #my_carpets = Mycarpet()
@@ -11,7 +11,6 @@ import datetime
 logging.basicConfig(filename = "db_scrapping.log", 
                     level= logging.DEBUG, 
                     format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
-
 
 
 
