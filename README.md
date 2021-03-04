@@ -62,7 +62,7 @@ In the near futur, we will implement a more user friendly frontend with the use 
 
 Ce repositoire Github consiste à scrapper le site Maison du Monde afin de récupérer les miroir et les tapis les plus populaires. 
 
-##Installation
+## Installation
 Le projet est, pour le moment, construit sur un evironnement de production, pour pouvoir l'utiliser, il est nécessaire de faire tourner des container docker. Pour ce faire, il vous suffit d'écrire ses lignes de commandes :
 
     docker run -itd --name flask_scrapping -w /app -v `pwd`:/app --network my_scrap_net python
@@ -84,7 +84,7 @@ Dans ce projet, nous avons utilisées différentes technologies dont :
  - Jija
  
  #
- ###Package
+ ### Package
  
  Le meme organisation s'applique pour les package de python :
 
@@ -111,7 +111,7 @@ Après cela, nous avons utilisé ces deux fonction pour créer et insérer les d
 
 Enfin, nous avons créer une API et un front end avec le package Flask de python contenant plusieurs routes et arguments. Le tout est présent dans le fichier `flask_api.py`, dans le fichiers `template` nous avons le fichier `index.html` et dans le dossier `static` le ficher `style.css`.
 
-
+## Prochaine amélioration
 Dans un futur proche, nous allons ajouter un frontend puls adaptée pour l'utilisateur avec les templates de Jinja.
 
  - [ ] Avoir une barre de recherche
