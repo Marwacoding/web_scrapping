@@ -1,5 +1,8 @@
+#!/usr/bin/python
+
 import re
 import requests
+import datetime
 from bs4 import BeautifulSoup #pour utiliser BeautifulSoup j'ai besoin de bs4
 import logging
 import unidecode
@@ -11,21 +14,24 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 #https://stackoverflow.com/questions/27981545/suppress-insecurerequestwarning-unverified-https-request-is-being-made-in-pytho
 
 
-
+#print('hello main')
 
 class Mycarpet() :
 
     logging.basicConfig(filename = "web_scrapping.log", 
-    level= logging.DEBUG, format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
+                        level= logging.DEBUG, 
+                        format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
+    
+
 
 
     def __init__(self):
         
         try:
             self.response = requests.get('https://www.maisonsdumonde.com/FR/fr/c/tapis-1559ac122904996dcae8be4c5de8fda6', verify=False, timeout=5)
-        except (requests.exceptions.ConnectionError, requests.ConnectionError) :
+        except Exception as e :
         #https://stackoverflow.com/questions/16511337/correct-way-to-try-except-using-python-requests-module
-            logging.warning("failed to access url, check connection or url")
+            logging.error("[SCRAP] failed to access url, check connection or url" + str(e))
 
 
         self.maison_du_monde = self.response.text 
@@ -36,11 +42,13 @@ class Mycarpet() :
         self.desc = []
         self.dim = []
         self.final_price = []
-        self.result = []
-        
+        self.result_carpet = []
+        self.carpet_date = []
+    
+    #print("working ?")
         
     def carpet(self):
-        logging.info("accessing carpet info -- Start")
+        logging.info("[SCRAP] accessing carpet info -- Start")
         
         title_item = self.data.find_all("h2", class_= "font-weight-normal expand-link name mb-0")
         carpet_list = []
@@ -48,39 +56,42 @@ class Mycarpet() :
         try:
             for k, item in enumerate(title_item):
                 title = item.getText()
+                #print('this is all my html carpet element',title)
                 carpet_list.append(title)
                 self.final_item.append(carpet_list[k])
-        except (IndexError, TypeError):
-            logging.warning("Carpet info's list may be out of range")
+            #enumerate and k index to stop the iteration once all the items are filled in list
+            #print(self.final_item)
+            #return self.final_item
+        except Exception as e:
+            logging.error("[SCRAP] ERROR!!!!!! Carpet info's list may be out of range" +str(e))
         
-        logging.info("accessing carpet info -- End")
+        logging.info("[SCRAP] accessing carpet info -- End")
 
         
 
     def carpet_name(self):
-        logging.info("accessing carpet name -- Start")
+        logging.info("[SCRAP] accessing carpet name -- Start")
 
         try:
             for i in self.final_item:
-                #print(i)
+                #print('all my items',i)
                 if len(i.split(" - "))==2:
                     self.names.append(i.split(" - ")[0])
-                #print('name of carptet  1= ',self.names)
-                else:
-                    logging.warning(f'Carpet name list may be out of range, print {i} to check the content')
+                #print('name of carptet ',self.names)
 
+            logging.info("[SCRAP] accessing carpet name -- End")
 
             return self.names
-        except (IndexError, TypeError, NameError, SyntaxError):
-            logging.warning("Carpet name's list is not created, check the conditions")
+        except Exception as e :
+            logging.error("[SCRAP] ERROR !!!!!!!! Carpet name's list is not created, check the conditions" + str(e))
 
 
-        logging.info("accessing carpet name -- End")
+        logging.info("[SCRAP] accessing carpet name -- End")
         
 
 
     def carpet_desc(self):
-        logging.info("accessing carpet descripsion -- Start")
+        logging.info("[SCRAP] accessing carpet descripsion -- Start")
 
         try:
             for i in self.final_item:
@@ -90,24 +101,24 @@ class Mycarpet() :
                     try:
                         description_sublist = re.split("(?<=\D)(?=\d)", unaccented_string.split(" - ")[1], maxsplit=1)
                         desc_item = [[item] for items in description_sublist for item in items.split(",")][0][0]
-                    except TypeError:
-                        logging.warning("split method in carpet descripsion is expecting a bytes-like object")
-                    except IndexError:
-                        logging.warning(f'Carpet descripsion list may be out of range, print {i} to check the content')
+                        self.desc.append(desc_item)
+                    except Exception as e:
+                        logging.error("split method in carpet descripsion is expecting a bytes-like object" +str(e))
 
-                    self.desc.append(desc_item)
+            logging.info("[SCRAP] accessing carpet descripsion -- End")
 
             return self.desc
-        except(IndexError, TypeError, NameError, SyntaxError):
-            logging.warning("Carpet descripsion's list is not created, check the conditions")
+
+        except Exception as e:
+            logging.warning("[SCRAP] Carpet descripsion's list is not created, check the conditions" +str(e))
 
 
-        logging.info("accessing carpet descripsion -- End")
+        
 
 
 
     def carpet_dim(self):
-        logging.info("accessing carpet dimention -- Start")
+        logging.info("[SCRAP] accessing carpet dimention -- Start")
 
         try:
             for i in self.final_item:
@@ -115,21 +126,42 @@ class Mycarpet() :
                     try:
                         dim_item =re.split("(?<=\D)(?=\d)", i, maxsplit= 1)[1]
                         self.dim.append(dim_item)
-                    except IndexError:
-                        logging.warning(f'Carpet dimension list may be out of range, print {i} to check the content')
+                    except Exception as e:
+                        logging.error("[SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print %s to check the content %s" %(i, str(e)))
 
-        
+            logging.info("[SCRAP] accessing carpet dimention -- End")
+
             return self.dim
 
-        except (IndexError, TypeError, NameError, SyntaxError):
-            logging.warning("Carpet dimension's list is not created, it may have an NameError or a SyntaxError.")
+        except Exception as e:
+            logging.warning("[SCRAP] Carpet dimension's list is not created, it may have an NameError or a SyntaxError." + str(e))
 
+    def carpet_dates(self):
+        logging.info("[SCRAP] accessing carpet dates -- Start")
 
-        logging.info("accessing carpet dimention -- End")
+        try:
+            for i in self.final_item:
+    
+                my_datetime = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+                self.carpet_date.append(my_datetime)
+            
+
+            logging.info("[SCRAP] accessing mirror date -- End")
+
+            return self.carpet_date
+                    
+            logging.info("[SCRAP] accessing carpet date -- End")
+
+            return self.dim
+
+        except Exception as e:
+            logging.warning("[SCRAP] Carpet date list is not created" + str(e))
+
+        
 
 
     def carpet_price(self):
-        logging.info("accessing carpet price -- Start")
+        logging.info("[SCRAP] accessing carpet price -- Start")
 
         item_price = self.data.find_all("div", class_= "ml-auto font-weight-semibold price")
         #print(item_price)
@@ -141,42 +173,49 @@ class Mycarpet() :
                 item_list.append(price)
                 #final_price.append(item_list[k])
                 self.final_price.append(item_list[k].split()[0])
+
+            logging.info("[SCRAP] accessing carpet price -- End")
+
             return self.final_price
-        except (IndexError, TypeError, NameError, SyntaxError):
-            logging.warning("Carpet price list is not created, check the conditions")
 
-        logging.info("accessing carpet price -- End")
+        except Exception as e:
+            logging.error("[SCRAP] Carpet price list is not created, check the conditions" + str(e))
+
+        logging.info("[SCRAP] accessing carpet price -- End")
 
 
-    def zip_list(self): 
-        logging.info("ziping all list to tranfer db-- Start")
+    def zip_carpet_list(self): 
+        logging.info("[SCRAP] ziping all list to tranfer db-- Start")
 
-        #print("this is name",self.names)
-        #print("this is desc",self.desc)
-        #print("this is dim",self.dim)
-        #print("this is price",self.final_price)
+        #print("this is carpet name",self.names)
+        #print("this is carpet desc",self.desc)
+        #print("this is carpet dim",self.dim)
+        #print("this is carpet price",self.final_price)
         #print(self.names, self.desc, self.dim, self.final_price)
         try:
-            result = list(zip(self.names, self.desc, self.dim, self.final_price))
-        except (IndexError, TypeError):
-            logging.warning("zip list of carpet is not created, check the conditions will affect mysql table")
+            self.result_carpet = list(zip(self.names, self.desc, self.dim, self.final_price, self.carpet_date))
+            #print("this zip carpet in web_scrap", self.result_carpet)
+        except Exception as e:
+            logging.error("[SCRAP] ERROR !!! zip list of carpet is not created, check the conditions will affect mysql table" + str(e))
 
-        #self.result.append(r)
+        logging.info("[SCRAP] ziping all list to tranfer db-- End")
+
+        return self.result_carpet
+
         
-        return result
 
-        logging.info("ziping all list to tranfer db-- End")
 
         
 class Mirror(): 
+
     def __init__(self): 
 
         logging.info('Accessing mirror class: start')
 
         try:
             self.response_mirror = requests.get('https://www.maisonsdumonde.com/FR/fr/c/miroirs-484554f26aa42ef448cafd6fe7ad385e', timeout=5, verify=False)
-        except (requests.exceptions.ConnectionError, requests.ConnectionError) :
-            logging.warning("failed to access url, check connection or url")
+        except Exception as e:
+            logging.error("[SCRAP] failed to access url, check connection or url" + str(e))
 
         self.maison_du_monde_mirror = self.response_mirror.text 
         self.data = BeautifulSoup(self.maison_du_monde_mirror,"html.parser")
@@ -187,13 +226,15 @@ class Mirror():
         self.mirror_dim = []
         self.mirror_price_list = []
         self.final_mirror = []
+        self.result_mirror = []
+        self.mirror_date = []
 
-        logging.info('Accessing mirror class: end')
+        logging.info('[SCRAP] Accessing mirror class: end')
 
-
+    
     def name_mirror_total(self):
-
-        logging.info('Accessing mirros name: start')
+        
+        logging.info('[SCRAP] Accessing mirros name: start')
 
         mirror_name = []
         title_name = self.data.find_all("h2", class_= "font-weight-normal expand-link name mb-0")
@@ -203,17 +244,20 @@ class Mirror():
                 title = item.getText()
                 mirror_name.append(title)
                 self.mirror_name_list.append(mirror_name[k])
+                #print(mirror_name_list)
             return self.mirror_name_list
-        except (IndexError, TypeError):
-            logging.warning("mirror info's list may be out of range")
 
-        logging.info('Accessing mirrors name: End')
+            logging.info('Accessing mirrors name: End')
 
-    
+        except Exception as e:
+            logging.error("[SCRAP] ERROOOOR !!! mirror info's list may be out of range" + str(e))
+
+        
+
 
     def mirror_name(self):
 
-        logging.info("accessing mirror name -- Start")
+        logging.info("[SCRAP] accessing mirror name -- Start")
 
         try:
             for i in self.mirror_name_list:
@@ -223,16 +267,19 @@ class Mirror():
                     unaccented_string = unidecode.unidecode(i)
 
                     self.mirror_names.append(unaccented_string.split(" - ")[0])
+
+            logging.info("[SCRAP] accessing mirror name -- End")
+
             return self.mirror_names
-        except (IndexError, TypeError, NameError, SyntaxError):
-            logging.warning("Mirror name's list is not created, check the conditions")
+
+        except Exception as e:
+            logging.error("[SCRAP] Erroooooor !!! Mirror name's list is not created, check the conditions" + str(e))
 
         logging.info("accessing mirror name -- End")
 
 
-
     def mirror_description(self):
-        logging.info("accessing mirror description -- Start")
+        logging.info("[SCRAP] accessing mirror description -- Start")
 
         try:
             for i in self.mirror_name_list:
@@ -241,49 +288,68 @@ class Mirror():
                     try:
                         description_sublist = re.split("(?<=\D)(?=\d)", unaccented_string.split(" - ")[1], maxsplit=1)
                         desc_item = [[item] for items in description_sublist for item in items.split(",")][0][0]
-                    except TypeError:
-                        logging.warning("split method in mirror descripsion is expecting a bytes-like object")
-                    except IndexError:
-                        logging.warning(f'Mirror descripsion list may be out of range, print {i} to check the content')
+                        self.mirror_desc.append(desc_item)
+                    except Exception as e:
+                        logging.error("[SCRAP] ERROR !!! Mirror descripsion list may be out of range, print %s to check the content %s" %(i, str(e)))
 
-                    self.mirror_desc.append(desc_item)
-
-            return self.desc
-
-        except(IndexError, TypeError, NameError, SyntaxError):
-            logging.warning("Mirror descripsion's list is not created, check the conditions")
+            logging.info("[SCRAP] accessing mirror description -- End")
 
 
-        logging.info("accessing mirror description -- End")
-    
+            return self.mirror_desc
+
+        except Exception as e:
+            logging.error("[SCRAP] ERROR !!!!!! Mirror descripsion's list is not created, check the conditions" +str(e))
 
 
-    def mirror_dimention(self):
-        logging.info("accessing mirror dimension -- Start")
+        
+
+    def mirror_dimension(self):
+        logging.info("[SCRAP] accessing mirror dimension -- Start")
 
         try:
+
             for i in self.mirror_name_list:
 
                 try:
                     if len(i.split(" - "))==2:
                         dim_item =re.split("(?<=\D)(?=\d)", i, maxsplit= 1)[1]
                         self.mirror_dim.append(dim_item)
-                except IndexError:
-                    logging.warning(f'Mirror dimension list may be out of range, print {i} to check the content')
+                except Exception as e:
+                    logging.error('[SCRAP] ERROORR !!! Mirror dimension list may be out of range, print %s to check the content %s' %(i, str(e)))
+
+            logging.info("[SCRAP] accessing mirror dimension -- End")
 
             return self.mirror_dim
 
+            
 
-        except (IndexError, TypeError, NameError, SyntaxError):
-            logging.warning("Mirror dimension's list is not created, it may have an NameError or a SyntaxError.")
+        except Exception as e:
+            logging.warning("[SCRAP] ERROOOOR !!! Mirror dimension's list is not created, it may have an NameError or a SyntaxError." +str(e))
 
-        logging.info("accessing mirror dimension -- End")
 
+
+    def mirror_dates(self):
+        logging.info("[SCRAP] accessing mirror date -- Start")
+
+        try:
+
+            for i in self.mirror_name_list:
+
+                my_datetime = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+                self.mirror_date.append(my_datetime)
+            
+
+            logging.info("[SCRAP] accessing mirror date -- End")
+
+            return self.mirror_date
+
+        except Exception as e:
+            logging.warning("[SCRAP] ERROOOOR !!! Mirror date has issue ==> " +str(e))
 
 
     def price_mirror(self):
 
-        logging.info('Getting my mirror price: start')
+        logging.info('[SCRAP] Getting my mirror price: start')
 
         mirror_price = []
         price_text = self.data.find_all("div", class_="ml-auto font-weight-semibold price")
@@ -293,25 +359,32 @@ class Mirror():
                 mirror_price.append(price)
                 self.mirror_price_list.append(mirror_price[k].split()[0])
             return self.mirror_price_list
-        except (IndexError, TypeError, NameError, SyntaxError):
-            logging.warning("Mirror price list is not created, check the conditions")
+
+            logging.info('[SCRAP] Getting my mirror price: End')
+
+        except Exception as e:
+            logging.error("[SCRAP] Mirror price list is not created, check the conditions" + str(e))
 
 
-        logging.info('Getting my mirror price: End')
 
-    
+
 
     def zip_list_mirror(self):
 
-        logging.info('Zipping all my lists in tuple: start')
+        logging.info('[SCRAP] Zipping all my lists in tuple: start')
         
         try:
-            result_mirror= list(zip(self.mirror_names, self.mirror_desc, self.mirror_dim, self.mirror_price_list))
+            #print("this is mirror names", self.mirror_price_list)
+            self.result_mirror= zip(self.mirror_names, self.mirror_desc, self.mirror_dim, self.mirror_price_list, self.mirror_date)
+            #print('this is zip mirror',self.result_mirror)
 
-            return result_mirror
-        except (IndexError, TypeError):
-            logging.warning("zip list of mirror is not created, check the conditions will affect mysql table")
+            logging.info('[SCRAP] Zipping all my lists in tuple: End')
+
+            return self.result_mirror
+            
+        except Exception as e:
+            logging.error("[SCRAP] ERROR !!! zip list of mirror is not created " +str(e))
 
 
-        logging.info('Zipping all my lists in tuple: End')
+        
 
