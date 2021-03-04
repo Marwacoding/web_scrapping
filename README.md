@@ -22,7 +22,7 @@ In this project, we used a lot of different technologies. To name them, there wa
  - mySQL
  - HTML
  - CSS
- - Jija
+ - Jinja
  
  #
  ### Packages
@@ -86,7 +86,7 @@ Dans ce projet, nous avons utilisées différentes technologies dont :
  - mySQL
  - HTML
  - CSS
- - Jija
+ - Jinja
  
  #
  ### Package
