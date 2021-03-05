@@ -50,7 +50,7 @@ In it, we have two classes, one for carpets articles and another for the mirrors
 
 Then, we used those two functions to create and insert the data in a sql database that is located in the `file_db.py`. We have another file that cleans article duplicate and send mails of the new items in the `mail_bdd.py`.
 
-![Alt Text](https://gph.is/g/aQdlMDR)
+![Alt Text](https://media.giphy.com/media/Dv6JSeXgDtp1SLW8mg/giphy.gif)
 
 
 
