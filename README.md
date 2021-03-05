@@ -50,6 +50,12 @@ In it, we have two classes, one for carpets articles and another for the mirrors
 
 Then, we used those two functions to create and insert the data in a sql database that is located in the `file_db.py`. We have another file that cleans article duplicate and send mails of the new items in the `mail_bdd.py`.
 
+
+  <iframe src="https://giphy.com/embed/Dv6JSeXgDtp1SLW8mg" width="480" height="300" frameBorder="0" class="giphy-embed"
+   allowFullScreen></iframe>
+
+
+
 Finally, we used the python package flask to create an API, with different routes and arguments, and a frontend. This files are located in `flask_api.py`, in the folder `templates` you will find an `index.html` and in the folder `static` the `style.css`
 
 
