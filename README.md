@@ -1,7 +1,8 @@
 # WebScrapper -- Maison Du Monde
 
-This repository is a scrapper of french decoration site Maison du Monde. The aim is to collect the most popular mirror and carpet
 
+This repository is a scrapper of french decoration site Maison du Monde. The aim is to collect the most popular mirror and carpet
+(French version below)
 
 ## Installation
 The project is currently in a development environment. To install and run the it, you have to create docker container. Here is the step to do it. In your command line, you have to write :
@@ -42,7 +43,7 @@ It's the same for python packages, we used :
 
     pip install bs4 requests Flask Flask-Cors Jinja2 mysql-connector-python Unidecode
 
-## Files and Organisations
+## Files and Structure
 
 In this project, all the files are interconnected to produce the final result.
 There one file that do the scrapping of the website named `my_scrap.py`.
@@ -50,8 +51,7 @@ In it, we have two classes, one for carpets articles and another for the mirrors
 
 Then, we used those two functions to create and insert the data in a sql database that is located in the `file_db.py`. We have another file that cleans article duplicate and send mails of the new items in the `mail_bdd.py`.
 
-
-  <iframe src="https://giphy.com/embed/Dv6JSeXgDtp1SLW8mg" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+![Alt Text](https://media.giphy.com/media/Dv6JSeXgDtp1SLW8mg/giphy.gif)
 
 
 
@@ -70,7 +70,7 @@ In the near futur, we will implement a more user friendly frontend with the use 
  
 # French
 
-Ce repositoire Github consiste à scrapper le site Maison du Monde afin de récupérer les miroirs et les tapis les plus populaires. 
+Ce depot Github consiste à scrapper le site Maison du Monde afin de récupérer les miroirs et les tapis les plus populaires. 
 
 ## Installation
 Le projet est, pour le moment, construit sur un evironnement de developpement, pour pouvoir l'utiliser, il est nécessaire de faire tourner des container docker. Pour ce faire, il vous suffit d'écrire ces lignes de commandes :
