@@ -1,0 +1,10 @@
+.env
+.DS_Store
+__pycache__
+log
+main.pyc
+my_scrap.pyc
+scrapper-vm_key.pem
+web_scrapping.log
+flask_api.log
+web_scrapping.log

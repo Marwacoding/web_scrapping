@@ -1,9 +1,11 @@
 from main import call_method_carpet, call_method_mirror
 import psycopg2
 import os
+from dotenv import load_dotenv
+load_dotenv()
 import logging
 
-#print(os.environ["scrap_mdp"])
+#print(os.environ["pw"])
 logging.basicConfig(filename = "db_scrapping.log", 
                     level= logging.DEBUG, 
                     format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
@@ -14,10 +16,10 @@ class Table():
     
     def __init__(self):
 
-        host = "scrapper-mdm.postgres.database.azure.com"
+        host = os.environ["host"]
         dbname = "my_db"
-        user = "marwa_admin@scrapper-mdm"
-        password = "MaisonduMonde!123"
+        user = os.environ["user"]
+        password = os.environ["pw"]
         sslmode = "require" 
 
         conn_string = "host={0} user={1} dbname={2} password={3} sslmode={4}".format(host, user, dbname, password, sslmode)

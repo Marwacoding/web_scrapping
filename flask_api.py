@@ -1,6 +1,9 @@
 from flask import Flask, render_template, jsonify, request
 from flask_cors import CORS 
 import psycopg2
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 #https://flask-cors.readthedocs.io/en/latest/
 import mysql.connector
@@ -15,12 +18,17 @@ CORS(app)
 #                                 user='root',
 #                                 password='123',
 #                                 )
-host = "scrapper-mdm.postgres.database.azure.com"
+host = os.environ["host"]
 dbname = "my_db"
-user = "marwa_admin@scrapper-mdm"
-password = "MaisonduMonde!123"
+user = os.environ["user"]
+password = os.environ["pw"]
 sslmode = "require" 
-sql_query = conn.cursor(dictionary=True)
+
+conn_string = "host={0} user={1} dbname={2} password={3} sslmode={4}".format(host, user, dbname, password, sslmode)
+#print(conn_string)
+conn = psycopg2.connect(conn_string)
+sql_query = conn.cursor()
+#sql_query = conn.cursor(dictionary=True)
 
 
 logging.basicConfig(filename = "flask_api.log", 
