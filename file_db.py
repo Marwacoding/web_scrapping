@@ -45,7 +45,7 @@ class Table():
         
         logging.info("[SQL] Creation table carpet : start")
 
-        #self.c.execute("DROP TABLE carpet")
+        self.c.execute("DROP TABLE carpet")
         self.c.execute("CREATE TABLE IF NOT EXISTS carpet (id INTEGER AUTO_INCREMENT PRIMARY KEY , carpet_name VARCHAR(255) NOT NULL, carpet_description VARCHAR(255) NOT NULL, carpet_dimention VARCHAR(255) NOT NULL, carpet_price VARCHAR(30) NOT NULL, carpet_date VARCHAR(40) NOT NULL)")
 
         logging.info("[SQL] Creation table carpet : end")
@@ -72,7 +72,7 @@ class Table():
         logging.info("[SQL] Creation table mirror : start")
 
         
-        #self.c.execute("DROP TABLE mirror")
+        self.c.execute("DROP TABLE mirror")
         self.c.execute("CREATE TABLE IF NOT EXISTS mirror (id INTEGER AUTO_INCREMENT PRIMARY KEY , mirror_named VARCHAR(255) NOT NULL, mirror_description VARCHAR(255) NOT NULL, mirror_dimention VARCHAR(255) NOT NULL, mirror_price VARCHAR(30) NOT NULL, mirror_date VARCHAR(255))")
 
         ogging.info("[SQL] Creation table mirror : end")

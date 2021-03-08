@@ -149,10 +149,8 @@ class Mycarpet() :
             logging.info("[SCRAP] accessing mirror date -- End")
 
             return self.carpet_date
-                    
-            logging.info("[SCRAP] accessing carpet date -- End")
 
-            return self.dim
+
 
         except Exception as e:
             logging.warning("[SCRAP] Carpet date list is not created" + str(e))
