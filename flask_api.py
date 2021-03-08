@@ -1,5 +1,7 @@
 from flask import Flask, render_template, jsonify, request
 from flask_cors import CORS 
+import psycopg2
+
 #https://flask-cors.readthedocs.io/en/latest/
 import mysql.connector
 import logging
@@ -8,12 +10,16 @@ import logging
 app = Flask(__name__)
 CORS(app)
 
-conn = mysql.connector.connect( host='scrap_sql',
-                                database='my_db',
-                                user='root',
-                                password='123',
-                                )
-
+# conn = mysql.connector.connect( host='scrap_sql',
+#                                 database='my_db',
+#                                 user='root',
+#                                 password='123',
+#                                 )
+host = "scrapper-mdm.postgres.database.azure.com"
+dbname = "my_db"
+user = "marwa_admin@scrapper-mdm"
+password = "MaisonduMonde!123"
+sslmode = "require" 
 sql_query = conn.cursor(dictionary=True)
 
 
