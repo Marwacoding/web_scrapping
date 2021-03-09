@@ -8,3 +8,4 @@ scrapper-vm_key.pem
 web_scrapping.log
 flask_api.log
 web_scrapping.log
+log/flask_api.log
