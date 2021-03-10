@@ -14,7 +14,9 @@ import smtplib, ssl
 from email.mime.text import MIMEText
 from email import encoders
 
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 mydb = mysql.connector.connect (
             host="scrap_sql",
@@ -66,10 +68,10 @@ def send_email(def_time):
     msg = MIMEText(body_of_email, "html")
     msg["Subject"] = "Maison du Monde API"
     msg["From"] = "marwa.tocode@gmail.com"
-    msg["To"] = "majbrim@gmail.com"
+    msg["To"] = os.environ["mail_pw"]
 
     s = smtplib.SMTP_SSL(host = "smtp.gmail.com", port = 465)
-    s.login(user = "marwa.tocode@gmail.com", password = "Pharma1$")
+    s.login(user = os.environ["mail_pw"], password = os.envrion["pw_mail"])
     s.sendmail(sender, receiver, msg.as_string())
     s.quit()
 
