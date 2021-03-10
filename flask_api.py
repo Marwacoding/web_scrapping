@@ -13,22 +13,23 @@ import logging
 app = Flask(__name__)
 CORS(app)
 
-# conn = mysql.connector.connect( host='scrap_sql',
-#                                 database='my_db',
-#                                 user='root',
-#                                 password='123',
-#                                 )
-host = os.environ["host"]
-dbname = "my_db"
-user = os.environ["user"]
-password = os.environ["pw"]
-sslmode = "require" 
 
-conn_string = "host={0} user={1} dbname={2} password={3} sslmode={4}".format(host, user, dbname, password, sslmode)
-#print(conn_string)
-conn = psycopg2.connect(conn_string)
+conn = mysql.connector.connect( host = os.environ["host_sql"],
+                                database = os.envrion["db_sql"],
+                                user = os.environ["user_sql"],
+                                password = os.environ["pw_sql"],
+                                )
+# host = os.environ["host"]
+# dbname = "my_db"
+# user = os.environ["user"]
+# password = os.environ["pw"]
+# sslmode = "require" 
+
+# conn_string = "host={0} user={1} dbname={2} password={3} sslmode={4}".format(host, user, dbname, password, sslmode)
+# #print(conn_string)
+# conn = psycopg2.connect(conn_string)
 sql_query = conn.cursor()
-#sql_query = conn.cursor(dictionary=True)
+sql_query = conn.cursor(dictionary=True)
 
 
 logging.basicConfig(filename = "flask_api.log", 

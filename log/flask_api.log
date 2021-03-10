@@ -1,6 +1,0 @@
-2021-02-22 13:26:14,588 - werkzeug -INFO -  * Running on http://0.0.0.0:3050/ (Press CTRL+C to quit)
-2021-02-22 13:26:14,595 - werkzeug -INFO -  * Restarting with stat
-2021-02-22 13:26:15,326 - werkzeug -WARNING -  * Debugger is active!
-2021-02-22 13:26:15,348 - werkzeug -INFO -  * Debugger PIN: 184-902-664
-2021-02-22 13:26:22,957 - werkzeug -INFO - 172.20.0.1 - - [22/Feb/2021 13:26:22] "[37mGET /api_carpet HTTP/1.1[0m" 200 -
-2021-02-22 13:26:23,154 - werkzeug -INFO - 172.20.0.1 - - [22/Feb/2021 13:26:23] "[33mGET /api_carpet/ws HTTP/1.1[0m" 404 -
