@@ -1,0 +1,242 @@
+2021-03-11 12:39:03,389 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.maisonsdumonde.com:443
+2021-03-11 12:39:03,563 - urllib3.connectionpool -DEBUG - https://www.maisonsdumonde.com:443 "GET /FR/fr/c/tapis-1559ac122904996dcae8be4c5de8fda6 HTTP/1.1" 200 None
+2021-03-11 12:39:04,336 - root -INFO - Accessing mirror class: start
+2021-03-11 12:39:04,344 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.maisonsdumonde.com:443
+2021-03-11 12:39:04,412 - urllib3.connectionpool -DEBUG - https://www.maisonsdumonde.com:443 "GET /FR/fr/c/miroirs-484554f26aa42ef448cafd6fe7ad385e HTTP/1.1" 200 None
+2021-03-11 12:39:04,850 - root -INFO - [SCRAP] Accessing mirror class: end
+2021-03-11 12:39:04,850 - root -INFO - [SCRAP] accessing carpet info -- Start
+2021-03-11 12:39:04,873 - root -INFO - [SCRAP] accessing carpet info -- End
+2021-03-11 12:39:04,873 - root -INFO - [MAIN] Scrapping carpet items with success
+2021-03-11 12:39:04,873 - root -INFO - [SCRAP] accessing carpet name -- Start
+2021-03-11 12:39:04,873 - root -INFO - [SCRAP] accessing carpet name -- End
+2021-03-11 12:39:04,873 - root -INFO - [MAIN] Accessing carpet names with success
+2021-03-11 12:39:04,873 - root -INFO - [SCRAP] accessing carpet descripsion -- Start
+2021-03-11 12:39:04,878 - root -INFO - [SCRAP] accessing carpet descripsion -- End
+2021-03-11 12:39:04,878 - root -INFO - [MAIN] Accessing carpet descripsion with success
+2021-03-11 12:39:04,878 - root -INFO - [SCRAP] accessing carpet dimention -- Start
+2021-03-11 12:39:04,879 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine beige 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:04,879 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INUIT - Tapis à poils longs beige 140x200 to check the content list index out of range
+2021-03-11 12:39:04,879 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print OUMKA - Tapis imitation fourrure blanche 160x230 to check the content list index out of range
+2021-03-11 12:39:04,879 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INUIT - Tapis à poils longs en tissu beige 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:04,879 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine taupe clair 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:04,879 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INUIT - Tapis à poils longs en tissu écru 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:04,879 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine anthracite 250 x 350 cm to check the content list index out of range
+2021-03-11 12:39:04,879 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INUIT - Tapis à poils longs écru 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:04,879 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print NORDIC - Tapis à poils courts bleu motifs graphiques 140x200 to check the content list index out of range
+2021-03-11 12:39:04,879 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine beige 200 x 200 cm to check the content list index out of range
+2021-03-11 12:39:04,879 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine beige 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:04,880 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INUIT - Tapis à poils longs en tissu gris 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:04,880 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine beige 250 x 350 cm to check the content list index out of range
+2021-03-11 12:39:04,880 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print POLAIRE - Tapis à poils longs écru 200 x 300 cm to check the content list index out of range
+2021-03-11 12:39:04,880 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print BARCELONE - Tapis en coton et jute 140x200 to check the content list index out of range
+2021-03-11 12:39:04,880 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INDUSTRY - Tapis en laine gris 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:04,880 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print ACAPULCO - Tapis tressé en laine multicolore 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:04,880 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print RAINBOW - Tapis en laine multicolore 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:04,880 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INDUSTRY - Tapis en laine beige 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:04,880 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine anthracite 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:04,880 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print OUMKA - Tapis en fausse fourrure blanche 140 x 200 to check the content list index out of range
+2021-03-11 12:39:04,880 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print BASTIDE - Tapis tressé en sisal beige 140x200 to check the content list index out of range
+2021-03-11 12:39:04,880 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print POLAIRE - Tapis à poils longs en tissu écru 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print ROULOTTE - Tapis tressé en coton multicolore 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INUIT - Tapis à poils longs en tissu gris 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print POLAIRE - Tapis à poils longs gris anthracite 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine taupe clair 160x230 to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print OUMKA - Tapis imitation fourrure blanche 80x200 to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INDUSTRY - Tapis en laine beige 200 x 300 cm to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print BASTIDE - Tapis tressé en sisal gris 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INDUSTRY - Tapis en laine grise 200x300 to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine taupe clair 250 x 350 cm to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print BASTIDE - Tapis tressé en sisal beige 160x230 to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print BASTIDE - Tapis tressé en sisal gris 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print POLAIRE - Tapis à poils longs en tissu anthracite 200 x 300 cm to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print ARTY - Tapis en cuir 140x200 to check the content list index out of range
+2021-03-11 12:39:04,881 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine anthracite 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:04,882 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print BASICS - Tapis en cuir beige et gris 140 x 200 to check the content list index out of range
+2021-03-11 12:39:04,882 - root -INFO - [SCRAP] accessing carpet dimention -- End
+2021-03-11 12:39:04,882 - root -INFO - [MAIN] Accessing carpet dimension with success
+2021-03-11 12:39:04,882 - root -INFO - [SCRAP] accessing carpet dates -- Start
+2021-03-11 12:39:04,882 - root -INFO - [SCRAP] accessing mirror date -- End
+2021-03-11 12:39:04,882 - root -INFO - [SCRAP] accessing carpet price -- Start
+2021-03-11 12:39:04,930 - root -INFO - [SCRAP] accessing carpet price -- End
+2021-03-11 12:39:04,930 - root -INFO - [MAIN] Accessing carpet prices with success
+2021-03-11 12:39:04,930 - root -INFO - [SCRAP] ziping all list to tranfer db-- Start
+2021-03-11 12:39:04,930 - root -INFO - [SCRAP] ziping all list to tranfer db-- End
+2021-03-11 12:39:04,930 - root -INFO - [MAIN] Ziping all my carpet info list with success
+2021-03-11 12:39:04,930 - root -INFO - [SCRAP] Accessing mirros name: start
+2021-03-11 12:39:04,951 - root -INFO - [MAIN] Scrapping mirror items with success
+2021-03-11 12:39:04,952 - root -INFO - [SCRAP] accessing mirror name -- Start
+2021-03-11 12:39:04,953 - root -INFO - [SCRAP] accessing mirror name -- End
+2021-03-11 12:39:04,953 - root -INFO - [MAIN] Accessing mirror names with success
+2021-03-11 12:39:04,953 - root -INFO - [SCRAP] accessing mirror description -- Start
+2021-03-11 12:39:04,954 - root -INFO - [SCRAP] accessing mirror description -- End
+2021-03-11 12:39:04,954 - root -INFO - [MAIN] Accessing mirror descripsion with success
+2021-03-11 12:39:04,954 - root -INFO - [SCRAP] accessing mirror dimension -- Start
+2021-03-11 12:39:04,954 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print OCÉAN - Miroir fenêtre blanc 47x71 to check the content list index out of range
+2021-03-11 12:39:04,954 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CERUSE - Miroir en paulownia 59x145 to check the content list index out of range
+2021-03-11 12:39:04,954 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CONSERVATOIRE - Miroir doré 85x153 to check the content list index out of range
+2021-03-11 12:39:04,954 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CARGO - Miroir en métal effet vieilli 95x120 to check the content list index out of range
+2021-03-11 12:39:04,954 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CAMARGUE - Miroir en paulownia gris 120x120 to check the content list index out of range
+2021-03-11 12:39:04,954 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ALTESSE - Miroir trumeau sculpté en paulownia blanc H 120 cm to check the content list index out of range
+2021-03-11 12:39:04,954 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ACHILLE - Miroir en métal noir 59x180 to check the content list index out of range
+2021-03-11 12:39:04,954 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print TOBIAS - Miroir en métal noir 90x90 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print BEAUSOLEIL - Miroir psyché en paulownia 40x168 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ARTOIS - Miroir indus en métal 80x120 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print SERRANT - Miroir en paulownia beige 100x150 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print TITOUAN - Miroir indus en métal noir 106x72 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ORANGERIE - Miroir en métal noir 92x135 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print KEY WEST - Miroir en sapin 70x160 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print VAUCLUSE - Miroir fenêtre en sapin et métal noir 80x120 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ROMANE - Miroir blanc 40x65 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CARGO - Miroir en métal effet rouille 46x165 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print SAINTE-MAXIME - Miroir fenêtre demi-lune en sapin 76x146 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print MAGELLAN - Miroir en métal doré D99 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CANCALE - Miroir en hévéa blanchi 100x200 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CABINE - Miroir en métal effet rouille D70 to check the content list index out of range
+2021-03-11 12:39:04,955 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print RUSTY - Miroir arcade en métal 65x110 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print LOGE - Miroir lumineux 60x80 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print LATIPUR - Miroir métallisé 75x160 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CAMILLE - Miroir psyché porte-bijoux en paulownia blanchi 42x160 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print JOSÉPHINE - Miroir trumeau en paulownia blanc 100x160 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print RIVAGE - Miroir en teck 153x75 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print KYARA - Miroir en manguier blanchi 60x80 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print COLLISION - Miroir en métal 140x85 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print SAHARANPUR - Miroir en manguier sculpté et métal 45x122 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CELESTE - Miroir en paulownia doré, 90x120 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ARCADE - Miroir en métal 110x65 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print KYARA - Miroir en manguier blanchi 79x110 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CHEVERNY - Miroir en métal effet rouille 60x90 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ANGELINA - Miroir effet vieilli 100x100 to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print FJORD - Miroir en bois flotté H 113 cm to check the content list index out of range
+2021-03-11 12:39:04,956 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ENZO - Miroir psyché blanc 164x44 to check the content list index out of range
+2021-03-11 12:39:04,957 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CONSTANCE - Miroir en sapin avec volets rabattables 71x48 to check the content list index out of range
+2021-03-11 12:39:04,958 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print VALENTINE - Miroir en paulownia blanc 145x59 to check the content list index out of range
+2021-03-11 12:39:04,958 - root -INFO - [SCRAP] accessing mirror dimension -- End
+2021-03-11 12:39:04,958 - root -INFO - [MAIN] Accessing mirror dimention with success
+2021-03-11 12:39:04,958 - root -INFO - [SCRAP] accessing mirror date -- Start
+2021-03-11 12:39:04,958 - root -INFO - [SCRAP] accessing mirror date -- End
+2021-03-11 12:39:04,958 - root -INFO - [SCRAP] Getting my mirror price: start
+2021-03-11 12:39:05,005 - root -INFO - [MAIN] Accessing mirror prices with success
+2021-03-11 12:39:05,005 - root -INFO - [SCRAP] Zipping all my lists in tuple: start
+2021-03-11 12:39:05,005 - root -INFO - [SCRAP] Zipping all my lists in tuple: End
+2021-03-11 12:39:05,005 - root -INFO - [MAIN] Ziping all my mirror info list with success
+2021-03-11 12:39:25,203 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.maisonsdumonde.com:443
+2021-03-11 12:39:25,276 - urllib3.connectionpool -DEBUG - https://www.maisonsdumonde.com:443 "GET /FR/fr/c/tapis-1559ac122904996dcae8be4c5de8fda6 HTTP/1.1" 200 None
+2021-03-11 12:39:25,917 - root -INFO - Accessing mirror class: start
+2021-03-11 12:39:25,921 - urllib3.connectionpool -DEBUG - Starting new HTTPS connection (1): www.maisonsdumonde.com:443
+2021-03-11 12:39:25,996 - urllib3.connectionpool -DEBUG - https://www.maisonsdumonde.com:443 "GET /FR/fr/c/miroirs-484554f26aa42ef448cafd6fe7ad385e HTTP/1.1" 200 None
+2021-03-11 12:39:26,473 - root -INFO - [SCRAP] Accessing mirror class: end
+2021-03-11 12:39:26,473 - root -INFO - [SCRAP] accessing carpet info -- Start
+2021-03-11 12:39:26,504 - root -INFO - [SCRAP] accessing carpet info -- End
+2021-03-11 12:39:26,504 - root -INFO - [MAIN] Scrapping carpet items with success
+2021-03-11 12:39:26,504 - root -INFO - [SCRAP] accessing carpet name -- Start
+2021-03-11 12:39:26,504 - root -INFO - [SCRAP] accessing carpet name -- End
+2021-03-11 12:39:26,504 - root -INFO - [MAIN] Accessing carpet names with success
+2021-03-11 12:39:26,504 - root -INFO - [SCRAP] accessing carpet descripsion -- Start
+2021-03-11 12:39:26,507 - root -INFO - [SCRAP] accessing carpet descripsion -- End
+2021-03-11 12:39:26,507 - root -INFO - [MAIN] Accessing carpet descripsion with success
+2021-03-11 12:39:26,507 - root -INFO - [SCRAP] accessing carpet dimention -- Start
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine beige 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INUIT - Tapis à poils longs beige 140x200 to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print OUMKA - Tapis imitation fourrure blanche 160x230 to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INUIT - Tapis à poils longs en tissu beige 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine taupe clair 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INUIT - Tapis à poils longs en tissu écru 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine anthracite 250 x 350 cm to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INUIT - Tapis à poils longs écru 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print NORDIC - Tapis à poils courts bleu motifs graphiques 140x200 to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine beige 200 x 200 cm to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine beige 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INUIT - Tapis à poils longs en tissu gris 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine beige 250 x 350 cm to check the content list index out of range
+2021-03-11 12:39:26,508 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print POLAIRE - Tapis à poils longs écru 200 x 300 cm to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print BARCELONE - Tapis en coton et jute 140x200 to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INDUSTRY - Tapis en laine gris 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print ACAPULCO - Tapis tressé en laine multicolore 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print RAINBOW - Tapis en laine multicolore 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INDUSTRY - Tapis en laine beige 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine anthracite 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print OUMKA - Tapis en fausse fourrure blanche 140 x 200 to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print BASTIDE - Tapis tressé en sisal beige 140x200 to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print POLAIRE - Tapis à poils longs en tissu écru 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print ROULOTTE - Tapis tressé en coton multicolore 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INUIT - Tapis à poils longs en tissu gris 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print POLAIRE - Tapis à poils longs gris anthracite 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine taupe clair 160x230 to check the content list index out of range
+2021-03-11 12:39:26,509 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print OUMKA - Tapis imitation fourrure blanche 80x200 to check the content list index out of range
+2021-03-11 12:39:26,510 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INDUSTRY - Tapis en laine beige 200 x 300 cm to check the content list index out of range
+2021-03-11 12:39:26,510 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print BASTIDE - Tapis tressé en sisal gris 160 x 230 cm to check the content list index out of range
+2021-03-11 12:39:26,510 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print INDUSTRY - Tapis en laine grise 200x300 to check the content list index out of range
+2021-03-11 12:39:26,510 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine taupe clair 250 x 350 cm to check the content list index out of range
+2021-03-11 12:39:26,510 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print BASTIDE - Tapis tressé en sisal beige 160x230 to check the content list index out of range
+2021-03-11 12:39:26,510 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print BASTIDE - Tapis tressé en sisal gris 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:26,510 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print POLAIRE - Tapis à poils longs en tissu anthracite 200 x 300 cm to check the content list index out of range
+2021-03-11 12:39:26,510 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print ARTY - Tapis en cuir 140x200 to check the content list index out of range
+2021-03-11 12:39:26,510 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print SOFT - Tapis à poils courts en laine anthracite 140 x 200 cm to check the content list index out of range
+2021-03-11 12:39:26,510 - root -ERROR - [SCRAP] ERROOOOOR !!!!! Carpet dimension list may be out of range, print BASICS - Tapis en cuir beige et gris 140 x 200 to check the content list index out of range
+2021-03-11 12:39:26,510 - root -INFO - [SCRAP] accessing carpet dimention -- End
+2021-03-11 12:39:26,510 - root -INFO - [MAIN] Accessing carpet dimension with success
+2021-03-11 12:39:26,510 - root -INFO - [SCRAP] accessing carpet dates -- Start
+2021-03-11 12:39:26,511 - root -INFO - [SCRAP] accessing mirror date -- End
+2021-03-11 12:39:26,511 - root -INFO - [SCRAP] accessing carpet price -- Start
+2021-03-11 12:39:26,560 - root -INFO - [SCRAP] accessing carpet price -- End
+2021-03-11 12:39:26,560 - root -INFO - [MAIN] Accessing carpet prices with success
+2021-03-11 12:39:26,560 - root -INFO - [SCRAP] ziping all list to tranfer db-- Start
+2021-03-11 12:39:26,560 - root -INFO - [SCRAP] ziping all list to tranfer db-- End
+2021-03-11 12:39:26,560 - root -INFO - [MAIN] Ziping all my carpet info list with success
+2021-03-11 12:39:26,560 - root -INFO - [SCRAP] Accessing mirros name: start
+2021-03-11 12:39:26,582 - root -INFO - [MAIN] Scrapping mirror items with success
+2021-03-11 12:39:26,582 - root -INFO - [SCRAP] accessing mirror name -- Start
+2021-03-11 12:39:26,585 - root -INFO - [SCRAP] accessing mirror name -- End
+2021-03-11 12:39:26,585 - root -INFO - [MAIN] Accessing mirror names with success
+2021-03-11 12:39:26,585 - root -INFO - [SCRAP] accessing mirror description -- Start
+2021-03-11 12:39:26,586 - root -INFO - [SCRAP] accessing mirror description -- End
+2021-03-11 12:39:26,586 - root -INFO - [MAIN] Accessing mirror descripsion with success
+2021-03-11 12:39:26,586 - root -INFO - [SCRAP] accessing mirror dimension -- Start
+2021-03-11 12:39:26,586 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print OCÉAN - Miroir fenêtre blanc 47x71 to check the content list index out of range
+2021-03-11 12:39:26,586 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CERUSE - Miroir en paulownia 59x145 to check the content list index out of range
+2021-03-11 12:39:26,586 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CONSERVATOIRE - Miroir doré 85x153 to check the content list index out of range
+2021-03-11 12:39:26,586 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CARGO - Miroir en métal effet vieilli 95x120 to check the content list index out of range
+2021-03-11 12:39:26,586 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CAMARGUE - Miroir en paulownia gris 120x120 to check the content list index out of range
+2021-03-11 12:39:26,586 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ALTESSE - Miroir trumeau sculpté en paulownia blanc H 120 cm to check the content list index out of range
+2021-03-11 12:39:26,586 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ACHILLE - Miroir en métal noir 59x180 to check the content list index out of range
+2021-03-11 12:39:26,587 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print TOBIAS - Miroir en métal noir 90x90 to check the content list index out of range
+2021-03-11 12:39:26,587 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print BEAUSOLEIL - Miroir psyché en paulownia 40x168 to check the content list index out of range
+2021-03-11 12:39:26,587 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ARTOIS - Miroir indus en métal 80x120 to check the content list index out of range
+2021-03-11 12:39:26,587 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print SERRANT - Miroir en paulownia beige 100x150 to check the content list index out of range
+2021-03-11 12:39:26,587 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print TITOUAN - Miroir indus en métal noir 106x72 to check the content list index out of range
+2021-03-11 12:39:26,587 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ORANGERIE - Miroir en métal noir 92x135 to check the content list index out of range
+2021-03-11 12:39:26,587 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print KEY WEST - Miroir en sapin 70x160 to check the content list index out of range
+2021-03-11 12:39:26,587 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print VAUCLUSE - Miroir fenêtre en sapin et métal noir 80x120 to check the content list index out of range
+2021-03-11 12:39:26,587 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ROMANE - Miroir blanc 40x65 to check the content list index out of range
+2021-03-11 12:39:26,587 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CARGO - Miroir en métal effet rouille 46x165 to check the content list index out of range
+2021-03-11 12:39:26,587 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print SAINTE-MAXIME - Miroir fenêtre demi-lune en sapin 76x146 to check the content list index out of range
+2021-03-11 12:39:26,587 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print MAGELLAN - Miroir en métal doré D99 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CANCALE - Miroir en hévéa blanchi 100x200 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CABINE - Miroir en métal effet rouille D70 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print RUSTY - Miroir arcade en métal 65x110 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print LOGE - Miroir lumineux 60x80 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print LATIPUR - Miroir métallisé 75x160 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CAMILLE - Miroir psyché porte-bijoux en paulownia blanchi 42x160 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print JOSÉPHINE - Miroir trumeau en paulownia blanc 100x160 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print RIVAGE - Miroir en teck 153x75 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print KYARA - Miroir en manguier blanchi 60x80 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print COLLISION - Miroir en métal 140x85 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print SAHARANPUR - Miroir en manguier sculpté et métal 45x122 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CELESTE - Miroir en paulownia doré, 90x120 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ARCADE - Miroir en métal 110x65 to check the content list index out of range
+2021-03-11 12:39:26,588 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print KYARA - Miroir en manguier blanchi 79x110 to check the content list index out of range
+2021-03-11 12:39:26,589 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CHEVERNY - Miroir en métal effet rouille 60x90 to check the content list index out of range
+2021-03-11 12:39:26,589 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ANGELINA - Miroir effet vieilli 100x100 to check the content list index out of range
+2021-03-11 12:39:26,589 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print FJORD - Miroir en bois flotté H 113 cm to check the content list index out of range
+2021-03-11 12:39:26,589 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print ENZO - Miroir psyché blanc 164x44 to check the content list index out of range
+2021-03-11 12:39:26,589 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print CONSTANCE - Miroir en sapin avec volets rabattables 71x48 to check the content list index out of range
+2021-03-11 12:39:26,589 - root -ERROR - [SCRAP] ERROORR !!! Mirror dimension list may be out of range, print VALENTINE - Miroir en paulownia blanc 145x59 to check the content list index out of range
+2021-03-11 12:39:26,589 - root -INFO - [SCRAP] accessing mirror dimension -- End
+2021-03-11 12:39:26,589 - root -INFO - [MAIN] Accessing mirror dimention with success
+2021-03-11 12:39:26,589 - root -INFO - [SCRAP] accessing mirror date -- Start
+2021-03-11 12:39:26,590 - root -INFO - [SCRAP] accessing mirror date -- End
+2021-03-11 12:39:26,590 - root -INFO - [SCRAP] Getting my mirror price: start
+2021-03-11 12:39:26,643 - root -INFO - [MAIN] Accessing mirror prices with success
+2021-03-11 12:39:26,643 - root -INFO - [SCRAP] Zipping all my lists in tuple: start
+2021-03-11 12:39:26,643 - root -INFO - [SCRAP] Zipping all my lists in tuple: End
+2021-03-11 12:39:26,643 - root -INFO - [MAIN] Ziping all my mirror info list with success
