@@ -11,7 +11,7 @@ import logging
 
 
 app = Flask(__name__)
-CORS(app)
+
 
 
 # conn = mysql.connector.connect( host = os.environ["host_sql"],
@@ -33,7 +33,7 @@ conn = psycopg2.connect(
 # #print(conn_string)
 # conn = psycopg2.connect(conn_string)
 sql_query = conn.cursor()
-sql_query = conn.cursor(dictionary=True)
+sql_query = conn.cursor()
 
 
 logging.basicConfig(filename = "web_scrapping.log", 
