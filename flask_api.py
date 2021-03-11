@@ -36,7 +36,7 @@ sql_query = conn.cursor()
 sql_query = conn.cursor(dictionary=True)
 
 
-logging.basicConfig(filename = "flask_api.log", 
+logging.basicConfig(filename = "web_scrapping.log", 
 level= logging.INFO, format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
 
 

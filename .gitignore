@@ -7,3 +7,5 @@ my_scrap.pyc
 scrapper-vm_key.pem
 .pem
 flask-ancible_key.pem
+postgres.pyc
+flask-ancible_key-2.pem
