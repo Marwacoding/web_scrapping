@@ -5,8 +5,5 @@ log
 main.pyc
 my_scrap.pyc
 scrapper-vm_key.pem
-web_scrapping.log
-flask_api.log
-log/flask_api.log
 .pem
 flask-ancible_key.pem
