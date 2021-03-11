@@ -22,10 +22,10 @@ class Table():
 
         try:
             self.mydb = mysql.connector.connect (
-            host="scrap_sql",
-            user="root",
-            database = "my_db",
-            password="123",
+            host = os.environ["host_sql"],
+            database = os.envrion["db_sql"],
+            user = os.environ["user_sql"],
+            password = os.environ["pw_sql"],
             )
         except(mysql.connector.errors.InterfaceError, mysql.connector.errors.ProgrammingError):
             logging.warning('[SQL] Failed to connect to docker container, check password, or docker connection')
