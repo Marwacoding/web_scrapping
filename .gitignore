@@ -10,3 +10,4 @@ flask_api.log
 web_scrapping.log
 log/flask_api.log
 .pem
+flask-ancible_key.pem

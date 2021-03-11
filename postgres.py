@@ -17,7 +17,7 @@ class Table():
     def __init__(self):
 
         host = os.environ["host"]
-        dbname = "my_db"
+        dbname = os.environ["db"]
         user = os.environ["user"]
         password = os.environ["pw"]
         sslmode = "require" 

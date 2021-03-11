@@ -1,6 +1,7 @@
 import mysql.connector
 import logging
 from my_scrap import *
+from postgres import *
 from main import call_method_carpet, call_method_mirror
 
 
