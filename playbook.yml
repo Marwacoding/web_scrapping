@@ -64,5 +64,5 @@
         src: "{{ playbook_dir }}/.env"
         dest: ./web_scrap
 
-    - name: Run my flask script
-      command: python ./project-app/flask_api.py
+    # - name: Run my flask script
+    #   command: python ./project-app/flask_api.py
