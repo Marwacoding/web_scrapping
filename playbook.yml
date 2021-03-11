@@ -1,0 +1,68 @@
+- name : Configuration of my repo in vm
+  hosts: azure-vm
+  remote_user: azureuser
+  become: yes
+  become_method: sudo
+
+
+tasks:
+  - name: Git installation
+    apt: 
+      name: git 
+      update_cache: yes
+
+  - name: Posgtres instalation
+    apt: 
+      name: postgresql
+      update_cache: yes
+
+  # - name: mySQL instalation
+  #   apt: 
+  #     name: mysql
+  #     update_cache: yes
+
+  - name: Pip installation
+    apt:
+      name: python-pip
+
+  - name: Pip3 intallation
+    apt:
+      name: python3-pip
+
+  - name: Packages installation
+    pip:
+      name: 
+        - requests 
+        - beautifulsoup4
+        - unidecode 
+        - mysql-connector-python
+        - python-dotenv
+        - Flask
+        - psycopg2-binary
+
+  - name: setting postgres password 
+    become: yes
+    become_method: sudo
+    become_user: postgres
+    postgresql_user: 
+      db: postgres
+      name: postgres
+      password: "123"
+
+  - name: create directory
+    file:
+      path: ./web_scrap
+      state: directory
+
+  - name: Clone a repo git
+    git:
+      repo: https://github.com/Marwacoding/web_scrapping.git
+      dest: ./web_scrap 
+
+  - name: added .env
+    copy:
+      src: "{{ playbook_dir }}/.env"
+      dest: ./web_scrap
+
+  - name: Run my flask script
+  command: python ./project-app/flask_api.py
