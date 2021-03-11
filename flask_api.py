@@ -14,16 +14,20 @@ app = Flask(__name__)
 CORS(app)
 
 
-conn = mysql.connector.connect( host = os.environ["host_sql"],
-                                database = os.envrion["db_sql"],
-                                user = os.environ["user_sql"],
-                                password = os.environ["pw_sql"],
-                                )
-# host = os.environ["host"]
-# dbname = "my_db"
-# user = os.environ["user"]
-# password = os.environ["pw"]
-# sslmode = "require" 
+# conn = mysql.connector.connect( host = os.environ["host_sql"],
+#                                 database = os.envrion["db_sql"],
+#                                 user = os.environ["user_sql"],
+#                                 password = os.environ["pw_sql"],
+#                                 )
+conn = psycopg2.connect(
+
+    host = os.environ["host"]
+    dbname = os.environ["my_db"]
+    user = os.environ["user"]
+    password = os.environ["pw"]
+    sslmode = "require" 
+
+    )
 
 # conn_string = "host={0} user={1} dbname={2} password={3} sslmode={4}".format(host, user, dbname, password, sslmode)
 # #print(conn_string)
@@ -61,93 +65,93 @@ def api_mirror():
     output = sql_query.fetchall()
     return jsonify(output)
 
-# @app.route('/api_carpet_lowest_to_highest_price', methods=['GET', 'POST'])
-# def carpet_lowest_to_highest_price():
+@app.route('/api_carpet_lowest_to_highest_price', methods=['GET', 'POST'])
+def carpet_lowest_to_highest_price():
 
-#     #https://stackoverflow.com/questions/8887760/order-by-price-returns-a-weird-order-in-mysql
+    #https://stackoverflow.com/questions/8887760/order-by-price-returns-a-weird-order-in-mysql
 
-#     sql_query.execute(f"SELECT * FROM carpet ORDER BY CAST(carpet_price AS DECIMAL(10,2)) ASC")
-#     output = sql_query.fetchall()
-#     return jsonify(output)
+    sql_query.execute(f"SELECT * FROM carpet ORDER BY CAST(carpet_price AS DECIMAL(10,2)) ASC")
+    output = sql_query.fetchall()
+    return jsonify(output)
 
-# @app.route('/api_carpet_highest_to_lowest_price', methods=['GET', 'POST'])
-# def carpet_highest_to_lowest_price():
+@app.route('/api_carpet_highest_to_lowest_price', methods=['GET', 'POST'])
+def carpet_highest_to_lowest_price():
 
-#     sql_query.execute(f"SELECT * FROM carpet ORDER BY CAST(carpet_price AS DECIMAL(10,2)) DESC")
-#     output = sql_query.fetchall()
-#     return jsonify(output)
+    sql_query.execute(f"SELECT * FROM carpet ORDER BY CAST(carpet_price AS DECIMAL(10,2)) DESC")
+    output = sql_query.fetchall()
+    return jsonify(output)
 
-# @app.route('/api_mirror_lowest_to_highest_price', methods=['GET', 'POST'])
-# def mirror_lowest_to_highest_price():
+@app.route('/api_mirror_lowest_to_highest_price', methods=['GET', 'POST'])
+def mirror_lowest_to_highest_price():
 
-#     sql_query.execute(f"SELECT * FROM mirror ORDER BY CAST(mirror_price AS DECIMAL(10,2)) ASC")
-#     output = sql_query.fetchall()
-#     return jsonify(output)
+    sql_query.execute(f"SELECT * FROM mirror ORDER BY CAST(mirror_price AS DECIMAL(10,2)) ASC")
+    output = sql_query.fetchall()
+    return jsonify(output)
 
-# @app.route('/api_mirror_highest_to_lowest_price', methods=['GET', 'POST'])
-# def mirrro_highest_to_lowest_price():
+@app.route('/api_mirror_highest_to_lowest_price', methods=['GET', 'POST'])
+def mirrro_highest_to_lowest_price():
 
-#     sql_query.execute(f"SELECT * FROM mirror ORDER BY CAST(mirror_price AS DECIMAL(10,2)) DESC")
-#     output = sql_query.fetchall()
-#     return jsonify(output)
+    sql_query.execute(f"SELECT * FROM mirror ORDER BY CAST(mirror_price AS DECIMAL(10,2)) DESC")
+    output = sql_query.fetchall()
+    return jsonify(output)
 
-# # URL A SAISIR == http://localhost:4050/api_carpet_price?name=carpet&price=200
-# @app.route('/api_carpet_price', methods=['GET', 'POST'])
-# def carpet_price():
+# URL A SAISIR == http://localhost:4050/api_carpet_price?name=carpet&price=200
+@app.route('/api_carpet_price', methods=['GET', 'POST'])
+def carpet_price():
 
-#     carpet_name = request.args.get('name')
-#     carpet_price = request.args.get('price')
-
-
-#     sql_query.execute(f"SELECT * FROM {carpet_name} WHERE carpet_price <= {carpet_price}")
-#     output = sql_query.fetchall()
-#     return jsonify(output)
-
-# @app.route('/api_mirror_price', methods=['GET', 'POST'])
-# def mirror_price():
-#     mirror_name = request.args.get('name')
-#     mirror_price = request.args.get('price')
-
-#     sql_query.execute(f"SELECT * FROM {mirror_name} WHERE mirror_price <= {mirror_price}")
-#     output = sql_query.fetchall()
-#     return jsonify(output)
-
-# @app.route('/api_carpet_texture', methods=['GET', 'POST'])
-# def type_carpet():
-#     carpet_desc = request.args.get('matiere')
-
-#     sql_query.execute(f'SELECT * FROM carpet WHERE carpet_description LIKE "%{carpet_desc}%" ')
-#     output = sql_query.fetchall()
-#     return jsonify(output)
+    carpet_name = request.args.get('name')
+    carpet_price = request.args.get('price')
 
 
-# @app.route('/api_mirror_type', methods=['GET', 'POST'])
-# def type_mirror():
-#     mirror_type = request.args.get('type')
+    sql_query.execute(f"SELECT * FROM {carpet_name} WHERE carpet_price <= {carpet_price}")
+    output = sql_query.fetchall()
+    return jsonify(output)
 
-#     sql_query.execute(f'SELECT * FROM mirror WHERE mirror_description LIKE "%{mirror_type}%" ')
-#     output = sql_query.fetchall()
-#     return jsonify(output)
+@app.route('/api_mirror_price', methods=['GET', 'POST'])
+def mirror_price():
+    mirror_name = request.args.get('name')
+    mirror_price = request.args.get('price')
 
-# @app.route('/api_mirror_color', methods=['GET', 'POST'])
-# def color_mirror():
-#     mirror_color = request.args.get('color')
+    sql_query.execute(f"SELECT * FROM {mirror_name} WHERE mirror_price <= {mirror_price}")
+    output = sql_query.fetchall()
+    return jsonify(output)
 
-#     sql_query.execute(f'SELECT * FROM mirror WHERE mirror_description LIKE "%{mirror_color}%" ')
-#     output = sql_query.fetchall()
-#     return jsonify(output)
+@app.route('/api_carpet_texture', methods=['GET', 'POST'])
+def type_carpet():
+    carpet_desc = request.args.get('matiere')
 
-# @app.route('/href', methods=['GET'])
-# def links():
-#     href = ['http://localhost:4050/', 'http://localhost:4050/api', 'http://localhost:4050/api_carpet','http://localhost:4050/api_mirror','http://localhost:4050/api_carpet_lowest_to_highest_price','http://localhost:4050/api_mirror_lowest_to_highest_price', 'http://localhost:4050/api_carpet_highest_to_lowest_price', 'http://localhost:4050/api_mirror_highest_to_lowest_price', 'http://localhost:4050/api_carpet_price?name=carpet&price=', 'http://localhost:4050/api_mirror_price?name=mirror&price=', 'http://localhost:4050/api_carpet_texture?matiere=', 'http://localhost:4050/api_mirror_type?type=', 'http://localhost:4050/api_mirror_color?color=']
+    sql_query.execute(f'SELECT * FROM carpet WHERE carpet_description LIKE "%{carpet_desc}%" ')
+    output = sql_query.fetchall()
+    return jsonify(output)
 
-#     return jsonify(href)
 
-# @app.route('/time', methods=['GET', 'POST'])
-# def time_carpet():
-#     sql_query.execute("SELECT * FROM carpet WHERE DATE_ADD(carpet_date, INTERVAL 1 WEEK) >= NOW()")
-#     output = sql_query.fetchall()
-#     return jsonify(output)
+@app.route('/api_mirror_type', methods=['GET', 'POST'])
+def type_mirror():
+    mirror_type = request.args.get('type')
+
+    sql_query.execute(f'SELECT * FROM mirror WHERE mirror_description LIKE "%{mirror_type}%" ')
+    output = sql_query.fetchall()
+    return jsonify(output)
+
+@app.route('/api_mirror_color', methods=['GET', 'POST'])
+def color_mirror():
+    mirror_color = request.args.get('color')
+
+    sql_query.execute(f'SELECT * FROM mirror WHERE mirror_description LIKE "%{mirror_color}%" ')
+    output = sql_query.fetchall()
+    return jsonify(output)
+
+@app.route('/href', methods=['GET'])
+def links():
+    href = ['http://localhost:4050/', 'http://localhost:4050/api', 'http://localhost:4050/api_carpet','http://localhost:4050/api_mirror','http://localhost:4050/api_carpet_lowest_to_highest_price','http://localhost:4050/api_mirror_lowest_to_highest_price', 'http://localhost:4050/api_carpet_highest_to_lowest_price', 'http://localhost:4050/api_mirror_highest_to_lowest_price', 'http://localhost:4050/api_carpet_price?name=carpet&price=', 'http://localhost:4050/api_mirror_price?name=mirror&price=', 'http://localhost:4050/api_carpet_texture?matiere=', 'http://localhost:4050/api_mirror_type?type=', 'http://localhost:4050/api_mirror_color?color=']
+
+    return jsonify(href)
+
+@app.route('/time', methods=['GET', 'POST'])
+def time_carpet():
+    sql_query.execute("SELECT * FROM carpet WHERE DATE_ADD(carpet_date, INTERVAL 1 WEEK) >= NOW()")
+    output = sql_query.fetchall()
+    return jsonify(output)
 
 
 # #   def reset_logfile(logfile_path):
