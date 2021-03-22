@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 #https://flask-cors.readthedocs.io/en/latest/
-import mysql.connector
+#import mysql.connector
 import logging
 
 
@@ -36,8 +36,8 @@ sql_query = conn.cursor()
 sql_query = conn.cursor()
 
 
-logging.basicConfig(filename = "web_scrapping.log", 
-level= logging.INFO, format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
+# logging.basicConfig(filename = "web_scrapping.log", 
+# level= logging.INFO, format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
 
 
 

@@ -13,15 +13,11 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 #https://stackoverflow.com/questions/27981545/suppress-insecurerequestwarning-unverified-https-request-is-being-made-in-pytho
 
-
+logging.basicConfig(filename = "web_scrapping.log", level= logging.DEBUG, 
+                    format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
 #print('hello main')
 
 class Mycarpet() :
-
-    logging.basicConfig(filename = "web_scrapping.log", 
-                        level= logging.DEBUG, 
-                        format='%(asctime)s - %(name)s -%(levelname)s - %(message)s')
-    
 
 
 

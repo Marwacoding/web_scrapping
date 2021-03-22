@@ -9,3 +9,4 @@ scrapper-vm_key.pem
 flask-ancible_key.pem
 postgres.pyc
 flask-ancible_key-2.pem
+scrap-mail_key.pem
