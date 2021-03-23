@@ -10,3 +10,7 @@ flask-ancible_key.pem
 postgres.pyc
 flask-ancible_key-2.pem
 scrap-mail_key.pem
+mail_dbb.pyc
+web_scrapping.log
+file_db.pyc
+logfile
