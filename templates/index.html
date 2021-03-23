@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"> 
     <title>Maison du monde scrapping</title>
 </head>
 <body>
@@ -12,68 +12,17 @@
     <h1>Here is the place to find the finnest mirror</h1>
     <h2>and the most confy carpet</h2>
     <div class='container'>
-    <div id="myData"></div>
-    <div id="data2"></div>
+        <p>Enter your mail and you'll receive the latest news : </p>
+        <form id="form_mail" method="post" action="/">
+            <input id="mail" type="email" name="user_mail" id="" placeholder="Enter your email : ">
+            <input type="submit" value="submit" id="btn" />
+            <!-- <input id="btn" type="button" value="Submit"> -->
+            <!-- <a href="/submit"><button id="btn" type="Submit">Submit</button></a> -->
+        </form>
+
+        
     </div>
 
-    <script>
-
-       //https://howtocreateapps.com/fetch-and-display-json-html-javascript/
-       //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-
-        fetch('http://localhost:4050/api_carpet', {mode: 'cors'})
-
-            .then(function (response) {
-                console.log(response)
-                return response.json();
-            })
-            .then(function (data) {
-                console.log("my data", data)
-                appendData(data);
-            })
-            .catch(function (err) {
-                console.log(err);
-            });
-
-            function appendData(data) {
-                var mainContainer = document.getElementById("myData");
-
-                for (let i = 0; i < data.length; i++) {
-                    let div = document.createElement("div");
-                    div.classList.add("carpet_div")
-                    div.innerHTML = data[i];
-                    mainContainer.appendChild(div);
-                }
-                    
-            }
-
-            fetch('http://localhost:4050/api_mirror', {mode: 'cors'})
-
-                .then(function (response) {
-                    console.log(response)
-                    return response.json();
-                })
-                .then(function (data) {
-                    console.log("my data", data)
-                    mirror_data(data);
-                })
-                .catch(function (err) {
-                    console.log(err);
-                });
-
-                function mirror_data(data) {
-                    var mainContainer = document.getElementById("data2");
-
-                    for (let i = 0; i < data.length; i++) {
-                        let div = document.createElement("div");
-                        div.classList.add("mirror_div")
-                        div.innerHTML = data[i];
-                        mainContainer.appendChild(div);
-                    }
-                        
-                }
-
-
-    </script>
+    
 </body>
 </html>

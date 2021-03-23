@@ -1,11 +1,46 @@
 body{
-    background-color: white;
+    background-color:#999DCC;
 }
 
-h1, h2{
-    margin: auto
+h1,h2, p{
+text-align: center;
+margin: 1em 0;
 }
-.container{
-    display: flex;
-    justify-content: space-around;
+
+.container {
+    text-align: center;
+    border: 1px gray solid;
+    background-color: #B4B5DD;
+    padding: 6em 0;
+    border-radius: 1em;
+    max-width: 600px;
+    width: 100%;
+    margin : auto;
 }
+
+#mail{
+    padding: .8em 13em;
+    border-radius: .8em;
+}
+
+a{
+    text-decoration: none;
+}
+
+#btn{
+    display : block;
+    margin : 1em auto;
+    padding: .5em 10em;
+    background-color: #999DCC;
+    border-radius: .8em;
+}
+
+#btn:hover{
+    opacity: .8;
+    box-shadow: -2px -2px 5px #B4B5DD, 2px 2px 5px #BABECC;
+}
+
+/* .li_element{
+    list-style: none;
+} */
+
