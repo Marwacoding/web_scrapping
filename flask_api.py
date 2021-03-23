@@ -8,11 +8,11 @@ load_dotenv()
 #https://flask-cors.readthedocs.io/en/latest/
 #import mysql.connector
 import logging
-
+from mail_dbb import send_email
 
 app = Flask(__name__)
 
-
+print("connexion")
 
 # conn = mysql.connector.connect( host = os.environ["host_sql"],
 #                                 database = os.envrion["db_sql"],
@@ -23,9 +23,9 @@ conn = psycopg2.connect(
 
     host = os.environ["host"],
     dbname = os.environ["db"],
-    user = os.environ["user"],
-    password = os.environ["pw"],
-    sslmode = "require", 
+    #user = os.environ["user"],
+    #password = os.environ["pw"],
+    #sslmode = "require", 
 
     )
 
@@ -44,6 +44,19 @@ sql_query = conn.cursor()
 @app.route('/', methods=['GET'])
 def welcome(): 
     return render_template("index.html")
+
+@app.route('/', methods=['POST'])
+def retrieve_mail():
+    try:
+        mail_user = request.form.get('user_mail')
+        print(mail_user)
+        
+        send_email("hello word", mail_user)
+        return render_template("index.html")
+        #return render_template("sucess.html")
+    except Exception as e:
+        print ("error is %s" %e)
+        #return render_template("fail.html")
 
 @app.route('/api', methods=['GET'])
 def api():
