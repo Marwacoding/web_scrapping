@@ -18,11 +18,11 @@ class Table():
 
         host = os.environ["host"]
         dbname = os.environ["db"]
-        user = os.environ["user"]
-        password = os.environ["pw"]
-        sslmode = "require" 
+        #user = os.environ["user"]
+        #password = os.environ["pw"]
+        #sslmode = "require" 
 
-        conn_string = "host={0} user={1} dbname={2} password={3} sslmode={4}".format(host, user, dbname, password, sslmode)
+        conn_string = "host={0} dbname={1}".format(host, dbname)
         #print(conn_string)
         self.conn = psycopg2.connect(conn_string)
         self.cursor = self.conn.cursor()

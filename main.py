@@ -4,7 +4,7 @@ from my_scrap import *
 #from file_db import *
 #from file_db import *
 
-print("hello")
+#print("hello")
 
 logging.basicConfig(level=logging.DEBUG,
                     filename="main_scrap.log",
