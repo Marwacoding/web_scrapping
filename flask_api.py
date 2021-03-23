@@ -50,8 +50,10 @@ def retrieve_mail():
     try:
         mail_user = request.form.get('user_mail')
         print(mail_user)
-        
-        send_email("hello word", mail_user)
+
+        sql_query.execute("SELECT * FROM carpet ORDER BY carpet_date DESC LIMIT 5")
+
+        send_email("hello", mail_user)
         return render_template("index.html")
         #return render_template("sucess.html")
     except Exception as e:
